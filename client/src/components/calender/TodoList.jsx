@@ -1,13 +1,6 @@
-import { Box, Checkbox, Flex, Input, Text } from "@chakra-ui/react";
-import React, { useState } from "react";
+import { Box, Checkbox, Flex, Text } from "@chakra-ui/react";
 
-export const TodoList = ({ todolist ,setTodoList}) => {
-  console.log("in todolist", todolist)
-  //const [data1, setData] = useState(todolist);
-  
- //  console.log("after data set ", data1);
-  // const [status,setStatus] = useState(false)
-
+export const TodoList = ({ todolist, setTodoList }) => {
   const handleChange = (id) => {
     let x = todolist.map((e) => {
       if (e.id === id) {
@@ -17,12 +10,11 @@ export const TodoList = ({ todolist ,setTodoList}) => {
       }
     });
     setTodoList(x);
-   // console.log(id);
   };
 
   return (
     <Box w="60%" marginTop="100px" m="auto" fontSize={"30px"}>
-      {  todolist.map((el) => {
+      {todolist.map((el) => {
         return (
           <Flex key={el.id} justifyContent="space-between">
             <Checkbox onChange={() => handleChange(el.id)} />
