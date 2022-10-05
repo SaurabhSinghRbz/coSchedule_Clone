@@ -61,7 +61,7 @@ const Homepage = () => {
   }
   for (let i = 0; i < weekday.length; i++) {
     if (i === 0) {
-      from_today.push({ id: i, name: "TODAY" });
+      from_today.push({ id: i, name: "recent" });
     } else if (i === 1) {
       from_today.push({ id: i, name: "TOMORROW" });
     } else if (day[i] < weekday.length) {
