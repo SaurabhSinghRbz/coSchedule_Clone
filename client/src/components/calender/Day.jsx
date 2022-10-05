@@ -1,20 +1,10 @@
-import React, { useContext, useState, useEffect } from "react";
-import {
-  Box,
-  Grid,
-  GridItem,
-  Text,
-  Flex,
-  MenuButton,
-  Menu,
-} from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Box, Text, Flex, MenuButton, Menu } from "@chakra-ui/react";
 import dayjs from "dayjs";
 import { AddIcon } from "@chakra-ui/icons";
 import "./day.css";
-import CreateButton from "./CreateButton";
 import CreateButtonMenuItem from "./CreateButtonMenuItem";
-import { DayContext } from '../../context/DayContext'
+import { DayContext } from "../../context/DayContext";
 import { useSelector } from "react-redux";
 import DayProjects from "./DayProjects";
 
@@ -32,10 +22,9 @@ const Day = ({ day, rowIdx }) => {
   //console.log(data)
 
   const dayTask = data.filter((e) => e.date === day.format("DD-MMMM-YYYY"));
- // console.log(dayTask);
+  // console.log(dayTask);
   return (
-    <Box 
- 
+    <Box
       className="myDIV"
       p="10px"
       border={"1px solid lightgrey"}
@@ -45,7 +34,9 @@ const Day = ({ day, rowIdx }) => {
       bgColor={`${getCurrentDayClass()}`}
     >
       {rowIdx === 0 && (
-        <Text  fontSize='lg' color={"grey"}  >{day.format("dddd").toUpperCase()}</Text>
+        <Text fontSize="lg" color={"grey"}>
+          {day.format("dddd").toUpperCase()}
+        </Text>
       )}
 
       <Flex color={"grey"} justifyContent="space-between">
@@ -70,9 +61,8 @@ const Day = ({ day, rowIdx }) => {
       </Flex>
       <Box>
         {dayTask.map((e) => (
-           <DayProjects key={e.refNO} {...e} />
-        ))} 
-         
+          <DayProjects key={e.refNO} {...e} />
+        ))}
       </Box>
     </Box>
   );
