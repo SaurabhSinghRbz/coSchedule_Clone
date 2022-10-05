@@ -1,8 +1,6 @@
 import { Box, Flex, Input, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 export const RegisterCalendar = () => {
-  const navigate = useNavigate()
   return (
     <Flex
       width={"32%"}
@@ -52,21 +50,25 @@ export const RegisterCalendar = () => {
         />
       </Flex>
       <Box display="flex" flexDirection="column" rowGap={"2.6rem"}>
-        <Link to = "/welcome">
+        <Link to="/welcome">
           {" "}
           <Button
             backgroundColor={"#d17760"}
             color={"white"}
             height="44px"
             width="219px"
-           
           >
             Take me to my Calendar
           </Button>
         </Link>
         <p>
           Have questions?{" "}
-          <a href="" style={{ color: "#d17760" }}>
+          <a
+            href="https://coschedule.com/contact-us"
+            style={{ color: "#d17760" }}
+            target="_blank"
+            rel="noreferrer"
+          >
             Contact Support
           </a>{" "}
         </p>

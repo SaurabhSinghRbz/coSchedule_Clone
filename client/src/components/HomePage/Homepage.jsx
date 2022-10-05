@@ -1,3 +1,4 @@
+/* eslint-disable no-lone-blocks */
 import {
   Flex,
   Box,
@@ -18,7 +19,7 @@ import {
   Grid,
 } from "@chakra-ui/react";
 
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { BiHomeAlt } from "react-icons/bi";
 import { IoIosShuffle } from "react-icons/io";
 import { SiSimpleanalytics } from "react-icons/si";
@@ -79,7 +80,7 @@ const Homepage = () => {
 
   const reducer = (state, { type }) => {
     switch (type) {
-      case 0:
+      case 0: 
         {
           sethead(`Home`);
         }
@@ -169,7 +170,7 @@ const Homepage = () => {
   ];
 
   //drawer
-  const {  onOpen} = useDisclosure();
+  const { onOpen } = useDisclosure();
 
   return (
     <Box display="block" overflow="clip">
@@ -649,7 +650,7 @@ const Homepage = () => {
             </Flex>
           </TabPanel>
 
-          <TabPanel>{/* <Calender/> */}</TabPanel>
+          <TabPanel></TabPanel>
 
           <TabPanel></TabPanel>
           <TabPanel>
