@@ -1,0 +1,43 @@
+.checkbox-round {
+    width: 2.5em;
+    height: 2.5em;
+    background-color:gray;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance: "none";
+     -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.checkbox-round:checked {
+    background-color: rgba(0, 129, 0, 0.849);
+}
+
+.getting-grid:hover{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+@media only screen and (max-width: 900px) {
+    .analytics
+    {
+        height:auto ;
+       grid-template-columns: repeat(2,1fr);
+       grid-template-rows: auto;
+    }
+}
+@media only screen and (max-width: 1075px) {
+    .getting_started
+    {
+        height:auto ;
+       grid-template-columns: repeat(1,1fr);
+       grid-template-rows: auto;
+        
+    }
+}
+
+
+
+
+
+
