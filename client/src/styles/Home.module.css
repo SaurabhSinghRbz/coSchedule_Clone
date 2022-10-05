@@ -1,0 +1,997 @@
+body {
+  font-family: " MuseoSans";
+  font-family: " MuseoSans300";
+}
+.heading {
+  color: #4b4b4b;
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  line-height: 130%;
+  text-transform: none;
+  width: 75%;
+  margin: auto;
+  margin-top: 3.4rem;
+  /* margin-bottom: 20px; */
+  font-family: " MuseoSans";
+}
+.para {
+  font-size: 18px;
+  line-height: 150%;
+  margin: 5px 0 25px;
+  color: #4b4b4b;
+  text-align: center;
+  font-family: " MuseoSans300";
+}
+.button {
+  background-color: #f37e5d;
+  color: #fff !important;
+  display: inline-block;
+  min-width: 220px;
+  padding: 15px 20px;
+  border-radius: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: " MuseoSans";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  text-align: center;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
+.button:hover {
+  background-color: #f16b45;
+}
+.imgposter {
+  width: 1140px;
+  height: 506.34px;
+  margin: auto;
+}
+.small {
+  font-size: 14px;
+  font-style: normal;
+  margin: 10px auto 0;
+  max-width: 300px;
+  line-height: 150%;
+  color: #4b4b4b;
+  font-size: 14px;
+  font-family: " MuseoSans300";
+}
+.heading2 {
+  color: #4b4b4b;
+  font-size: 30px;
+  font-family: " MuseoSans";
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  line-height: 130%;
+  text-transform: none;
+  width: 75%;
+  margin: auto;
+  margin-top: 40px;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1170px;
+  height: 194px;
+}
+.second_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 1140px;
+  height: 194px;
+}
+.customerlogo {
+  margin: 10px 20px 20px;
+  width: 184px;
+  height: 68px;
+}
+.imgstyle {
+  width: 180px;
+  height: 67px;
+}
+.BigBox {
+  padding: 70px 0;
+  background-color: #f8f8f8 !important;
+  width: 1263.33px;
+  height: 1230.42px;
+}
+
+.heading3 {
+  color: #4b4b4b;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  line-height: 130%;
+  text-transform: none;
+  width: 75%;
+  margin: auto;
+  margin-top: 10px;
+  font-family: " MuseoSans";
+}
+.boxA {
+  margin-bottom: 40px;
+}
+.box {
+  width: 1000px;
+  height: 518.46px;
+  display: flex;
+  margin: auto;
+  margin-top: -10px;
+}
+.inside {
+  width: 460px;
+  height: 478.46px;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 80px 40px 40px;
+  margin: 20px;
+  position: relative;
+  box-shadow: 2px 2px 20px 0 rgb(0 0 0 / 20%);
+}
+.smallBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+}
+
+.banner {
+  width: 460px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.imglogo {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  margin-left: 40px;
+  margin-top: -40px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 20px 0 rgb(0 0 0 / 20%);
+}
+.svglogo {
+  box-shadow: 2px 2px 20px 0 rgb(0 0 0 / 20%);
+  background-color: #fff;
+  border-radius: 4px;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  fill: #618be0;
+  margin-left: 40px;
+  margin-top: -40px;
+  margin-bottom: 20px;
+}
+.svglogo1 {
+  box-shadow: 2px 2px 20px 0 rgb(0 0 0 / 20%);
+  background-color: #fff;
+  border-radius: 4px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  margin-left: 10px;
+  margin-left: 40px;
+  margin-top: -40px;
+  margin-bottom: 20px;
+  fill: #8256e7;
+}
+.subheading {
+  font-family: " MuseoSans";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  margin-top: 40px;
+  margin-left: 40px;
+  text-align: left;
+  color: #4b4b4b;
+  font-family: " MuseoSans";
+}
+.subpara {
+  font-size: 15px;
+  padding: 3px 0;
+  color: #4b4b4b;
+  line-height: 170%;
+  box-sizing: border-box;
+  font-family: " MuseoSans300";
+  text-align: left;
+  margin-top: 6px;
+  margin-left: 40px;
+}
+.ullist {
+  list-style-image: url(https://coschedule.com/img/home/orange-checkmark.svg);
+  text-align: left;
+  padding-left: 50px;
+  margin: 20px 0 25px;
+  width: 360px;
+  color: #4b4b4b;
+  line-height: 2;
+  margin-bottom: 38px;
+  list-style-position: inside;
+  font-family: " MuseoSans300";
+}
+
+.checkbtn {
+  background-color: #ffede3;
+  color: #f37e5d;
+  transition: all 0.25s ease-in-out;
+  padding: 12px 30px;
+  min-width: auto;
+  font-size: 13px;
+  border-radius: 4px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  text-align: center;
+  box-sizing: border-box;
+  margin-left: -255px;
+  font-family: " MuseoSans";
+}
+.checkbtn:hover {
+  background-color: #ffe1d1;
+  color: #f37e5d;
+}
+.checkbtn2 {
+  background-color: #dfe8f9;
+  color: #618be0;
+  padding: 12px 30px;
+  min-width: auto;
+  font-size: 13px;
+  transition: all 0.25s ease-in-out;
+  border-radius: 4px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  text-align: center;
+  box-sizing: border-box;
+  margin-left: -255px;
+  font-family: " MuseoSans";
+}
+.checkbtn2:hover {
+  background-color: #c0d1f3;
+  color: #618be0;
+}
+.ullist2 {
+  list-style-image: url(https://coschedule.com/img/home/blue-checkmark.svg);
+  padding-left: 30px;
+  margin: 20px 0 25px;
+  line-height: 2;
+  margin-bottom: 38px;
+  list-style-position: inside;
+  text-align: left;
+  color: #4b4b4b;
+  margin-left: 20px;
+  font-family: " MuseoSans300";
+}
+.checkbtn3 {
+  background-color: #e6defa;
+  color: #835ce5;
+  padding: 12px 30px;
+  min-width: auto;
+  font-size: 13px;
+  transition: all 0.25s ease-in-out;
+  border-radius: 4px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  text-align: center;
+  box-sizing: border-box;
+  margin-left: -255px;
+  font-family: " MuseoSans";
+}
+.checkbtn3:hover {
+  background-color: #cdbef5;
+  color: #835ce5;
+  font-family: " MuseoSans";
+}
+
+.ullist3 {
+  list-style-image: url(https://coschedule.com/img/home/purple-checkmark.svg);
+  padding-left: 30px;
+  margin: 20px 0 25px;
+  line-height: 2;
+  text-align: left;
+  color: #4b4b4b;
+  margin-left: 20px;
+  margin-bottom: 38px;
+  list-style-position: inside;
+  font-family: " MuseoSans300";
+}
+.heading4 {
+  font-size: 30px;
+  margin: 0;
+  font-family: " MuseoSans";
+  color: #4b4b4b;
+}
+.secondpara {
+  font-size: 18px;
+  margin: auto;
+  font-family: " MuseoSans300";
+}
+.gridcss {
+  text-align: center;
+  padding: 30px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  width: 1140px;
+  height: 349.78px;
+  margin: auto;
+  font-family: " MuseoSans300";
+}
+
+.cosaccolade {
+  display: block;
+  border-radius: 4px;
+  padding: 30px 50px;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+  width: 360px;
+  height: 289.78px;
+  color: #4b4b4b;
+  font-family: " MuseoSans";
+}
+
+.cosaccolade:hover {
+  box-shadow: 2px 2px 25px 0 rgb(0 0 0 / 15%);
+  cursor: pointer;
+  text-decoration: none;
+}
+.coshome {
+  background: #f37e5d;
+  background: linear-gradient(90deg, #f37e5d 0, #f9a97d);
+  padding: 70px 20px;
+  text-align: center;
+  margin-bottom: -45px;
+  color: #4b4b4b;
+  font-family: " MuseoSans";
+}
+.coshomehead {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-family: " MuseoSans";
+}
+.lastbtn {
+  display: inline-block;
+  min-width: 220px;
+  box-sizing: border-box;
+  padding: 15px 20px;
+  background-color: #fff;
+  background-image: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  color: #f37e5d !important;
+  font-family: " MuseoSans";
+}
+.lastbtn:hover {
+  background-color: #fdece7;
+}
+.lastimg2 {
+  height: 84px;
+  width: 110px;
+  display: block;
+  margin: 20px auto;
+  margin-top: 26px;
+}
+.lastpara {
+  font-family: " MuseoSans300";
+  color: #4b4b4b;
+  font-size: 16px;
+  line-height: 170%;
+  margin: 0 0 10px;
+  box-sizing: border-box;
+}
+.gartnertext {
+  margin: 18px 0;
+}
+.gartnertext > hr {
+  width: 70px;
+  border: 0;
+  border-top: 3px solid #e9e9e9;
+  margin: 15px auto;
+}
+.h2 {
+  font-size: 50px;
+  color: #4b4b4b;
+}
+.h4 {
+  font-size: 24px;
+  line-height: 100%;
+  color: #4b4b4b;
+}
+
+/* media queries */
+/* 4k 2560px */
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
+  .BigBox {
+    width: auto;
+  }
+}
+/* 1440 px Laptop */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .heading {
+    width: auto;
+  }
+  .heading2 {
+    width: auto;
+  }
+  .heading3 {
+    width: auto;
+  }
+  .heading4 {
+    width: auto;
+  }
+  .container {
+    width: auto;
+  }
+  .second_container {
+    width: auto;
+  }
+  .BigBox {
+    width: auto;
+  }
+
+  .coshome {
+    width: auto;
+  }
+  .cosaccolade {
+    width: auto;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .heading {
+    width: 650px;
+    height: auto;
+  }
+  .heading2 {
+    width: auto;
+    height: auto;
+  }
+  .heading3 {
+    width: auto;
+    height: auto;
+  }
+  .heading4 {
+    width: auto;
+    height: auto;
+  }
+  .container {
+    width: auto;
+    height: auto;
+  }
+  .second_container {
+    width: auto;
+    height: auto;
+  }
+  .BigBox {
+    width: auto;
+    height: 1300px;
+  }
+  .gridcss {
+    width: auto;
+    height: auto;
+  }
+  .coshome {
+    width: auto;
+    height: auto;
+  }
+  .box {
+    width: auto;
+    height: 550px;
+  }
+  .boxA {
+    width: auto;
+    height: auto;
+  }
+  .inside {
+    width: 460px;
+    height: 508.46px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 80px 40px 40px;
+    margin: 20px;
+    position: relative;
+  }
+  .customerlogo {
+    width: auto;
+    height: auto;
+  }
+  .imgposter {
+    width: auto;
+    height: auto;
+  }
+  .smallBox {
+    width: auto;
+    height: auto;
+  }
+
+  .ullist {
+    width: auto;
+    height: auto;
+  }
+  .ullist2 {
+    width: auto;
+    height: auto;
+    text-overflow: hidden;
+    width: 300px;
+    margin-top: -5px;
+  }
+  .ullist3 {
+    width: 300px;
+    text-overflow: hidden;
+    margin-top: -10px;
+  }
+  .svglogo {
+    margin-bottom: -30px;
+  }
+  .svglogo1 {
+    margin-bottom: -30px;
+  }
+  .subheading {
+    width: auto;
+    height: auto;
+  }
+  .subpara {
+    width: auto;
+    height: auto;
+  }
+  .checkbtn {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+  }
+
+  .checkbtn2 {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+  }
+  .checkbtn3 {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+  }
+  .cosaccolade {
+    width: 180px;
+    height: 300px;
+  }
+
+  .tab {
+    width: 65px;
+    height: 65px;
+    margin-top: -40px;
+  }
+  .lastimg2 {
+    height: 65px;
+    width: 65px;
+    display: block;
+    margin: auto;
+    margin-top: -15px;
+  }
+  .lastpara {
+    font-family: " MuseoSans300";
+    color: #4b4b4b;
+    font-size: 14px;
+    margin: auto;
+    box-sizing: border-box;
+  }
+  .gartnertext > h2 {
+    margin: auto;
+    font-size: 15px;
+    margin-top: -10px;
+  }
+  .gartnertext > h4 {
+    margin: auto;
+    font-size: 15px;
+  }
+  .gartnertext > hr {
+    width: 70px;
+    border: 0;
+    border-top: 3px solid #e9e9e9;
+    margin: 15px auto;
+  }
+}
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .heading {
+    width: 300px;
+    height: auto;
+  }
+  .heading2 {
+    width: auto;
+    height: auto;
+  }
+  .heading3 {
+    width: auto;
+    height: auto;
+  }
+  .heading4 {
+    width: auto;
+    height: auto;
+  }
+  .container {
+    width: auto;
+    height: auto;
+  }
+  .second_container {
+    width: auto;
+    height: auto;
+  }
+  .BigBox {
+    width: auto;
+    height: auto;
+  }
+  .gridcss {
+    text-align: center;
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 30px;
+    width: auto;
+    height: 1000px;
+    margin: auto;
+    font-family: " MuseoSans300";
+  }
+  .grid2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: auto;
+  }
+  .inside {
+    width: 360px;
+    height: 508.46px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 80px 40px 40px;
+    margin: 20px;
+    position: relative;
+  }
+  .coshome {
+    width: auto;
+    height: auto;
+  }
+  .box {
+    width: auto;
+    height: auto;
+  }
+
+  .boxA {
+    width: auto;
+    height: auto;
+  }
+  .customerlogo {
+    width: auto;
+    height: auto;
+  }
+  .imgposter {
+    width: auto;
+    height: auto;
+  }
+  .smallBox {
+    width: auto;
+    height: auto;
+  }
+
+  .ullist {
+    width: auto;
+    height: auto;
+  }
+  .ullist2 {
+    width: auto;
+    height: auto;
+    text-overflow: hidden;
+    width: 300px;
+    margin-top: -5px;
+  }
+  .ullist3 {
+    width: 300px;
+    text-overflow: hidden;
+    margin-top: -10px;
+  }
+  .svglogo {
+    margin-bottom: -30px;
+  }
+  .svglogo1 {
+    margin-bottom: -30px;
+  }
+  .subheading {
+    width: auto;
+    height: auto;
+  }
+  .subpara {
+    width: auto;
+    height: auto;
+  }
+  .checkbtn {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+  }
+  .checkbtn2 {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+  }
+  .checkbtn3 {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 424px) {
+  .heading {
+    width: 260px;
+    height: auto;
+  }
+  .heading2 {
+    width: auto;
+    height: auto;
+  }
+  .heading3 {
+    width: auto;
+    height: auto;
+  }
+  .heading4 {
+    width: auto;
+    height: auto;
+  }
+  .container {
+    width: auto;
+    height: auto;
+  }
+  .second_container {
+    width: auto;
+    height: auto;
+  }
+  .BigBox {
+    width: auto;
+    height: auto;
+  }
+  .gridcss {
+    text-align: center;
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 30px;
+    width: auto;
+    height: 1000px;
+    margin: auto;
+    font-family: " MuseoSans300";
+  }
+  .grid2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: auto;
+  }
+  .inside {
+    width: 320px;
+    height: 550.46px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 80px 40px 40px;
+    margin: 20px;
+    position: relative;
+  }
+  .coshome {
+    width: auto;
+    height: auto;
+  }
+  .box {
+    width: auto;
+    height: auto;
+  }
+  .boxA {
+    width: auto;
+    height: auto;
+  }
+  .customerlogo {
+    width: auto;
+    height: auto;
+  }
+  .imgposter {
+    width: auto;
+    height: auto;
+  }
+  .smallBox {
+    width: auto;
+    height: auto;
+  }
+
+  .ullist {
+    width: auto;
+    height: auto;
+  }
+  .ullist2 {
+    width: auto;
+    height: auto;
+    text-overflow: hidden;
+    width: 300px;
+    margin-top: -5px;
+  }
+  .ullist3 {
+    width: 300px;
+    text-overflow: hidden;
+    margin-top: -10px;
+  }
+  .svglogo {
+    margin-bottom: -30px;
+  }
+  .svglogo1 {
+    margin-bottom: -30px;
+  }
+  .subheading {
+    width: auto;
+    height: auto;
+  }
+  .subpara {
+    width: auto;
+    height: auto;
+  }
+  .checkbtn {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+  }
+  .checkbtn2 {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+  }
+  .checkbtn3 {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .heading {
+    width: 260px;
+    height: auto;
+  }
+  .heading2 {
+    width: auto;
+    height: auto;
+  }
+  .heading3 {
+    width: auto;
+    height: auto;
+  }
+  .heading4 {
+    width: auto;
+    height: auto;
+  }
+  .container {
+    width: auto;
+    height: auto;
+  }
+  .second_container {
+    width: auto;
+    height: auto;
+  }
+  .BigBox {
+    width: auto;
+    height: auto;
+  }
+  .gridcss {
+    text-align: center;
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 30px;
+    width: auto;
+    height: 1000px;
+    margin: auto;
+    font-family: " MuseoSans300";
+  }
+  .grid2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: auto;
+  }
+  .inside {
+    width: 312px;
+    height: 550.46px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 80px 40px 40px;
+    margin: 20px;
+    position: relative;
+    margin-left: -10px;
+  }
+  .coshome {
+    width: auto;
+    height: auto;
+  }
+  .box {
+    width: auto;
+    height: auto;
+  }
+  .boxA {
+    width: auto;
+    height: auto;
+  }
+  .customerlogo {
+    width: auto;
+    height: auto;
+  }
+  .imgposter {
+    width: auto;
+    height: auto;
+  }
+  .smallBox {
+    width: auto;
+    height: auto;
+  }
+
+  .ullist {
+    width: auto;
+    height: auto;
+  }
+  .ullist2 {
+    width: auto;
+    height: auto;
+    text-overflow: hidden;
+    width: 300px;
+    margin-top: -5px;
+  }
+  .ullist3 {
+    width: 300px;
+    text-overflow: hidden;
+    margin-top: -10px;
+  }
+  .svglogo {
+    margin-bottom: -30px;
+  }
+  .svglogo1 {
+    margin-bottom: -30px;
+  }
+  .subheading {
+    width: auto;
+    height: auto;
+  }
+  .subpara {
+    width: auto;
+    height: auto;
+  }
+  .checkbtn {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+  }
+  .checkbtn2 {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+  }
+  .checkbtn3 {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+  }
+}
+
+.lastimg {
+  height: 85px;
+  width: 147px;
+  display: block;
+  margin: 20px auto;
+  margin-top: 38px;
+}

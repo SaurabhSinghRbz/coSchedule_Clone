@@ -1,0 +1,15 @@
+body {
+    font-family: " MuseoSans";
+    font-family: " MuseoSans300";
+  }
+  .heading{
+    font-size: 13px;
+    line-height: 130%;
+    color: var(--gray1);
+    padding: 2px 0;
+    transition: color .3s ease-in-out;
+    text-decoration: none;
+    font-family: " MuseoSans300";}
+
+ 
+ 
