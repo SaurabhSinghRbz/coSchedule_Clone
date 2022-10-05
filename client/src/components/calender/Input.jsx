@@ -1,4 +1,4 @@
-import { Flex, Button, Checkbox,Input as INput } from "@chakra-ui/react";
+import { Flex, Button, Input as INput } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { AddIcon } from "@chakra-ui/icons";
 export const Input = ({ addTodo }) => {
@@ -8,14 +8,24 @@ export const Input = ({ addTodo }) => {
     setText(e.target.value);
   };
   const handleAdd = () => {
-     // console.log(text)
+    // console.log(text)
     addTodo(text);
   };
 
   return (
-    <Flex   h="" diplay="flex" justifyContent={"space-evenly"}>
-     <INput p="10px 2px" fontSize={"25px"} focusBorderColor="grey" border="3px solid #44505E;"  placeholder="Add Task"  onChange={handleChange} type="text" />
-      <Button  onClick={handleAdd}><AddIcon/></Button>
+    <Flex h="" diplay="flex" justifyContent={"space-evenly"}>
+      <INput
+        p="10px 2px"
+        fontSize={"25px"}
+        focusBorderColor="grey"
+        border="3px solid #44505E;"
+        placeholder="Add Task"
+        onChange={handleChange}
+        type="text"
+      />
+      <Button onClick={handleAdd}>
+        <AddIcon />
+      </Button>
     </Flex>
   );
 };

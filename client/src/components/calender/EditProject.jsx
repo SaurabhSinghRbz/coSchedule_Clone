@@ -4,7 +4,6 @@ import {
   Flex,
   Input,
   Popover,
-  PopoverArrow,
   Button,
   PopoverContent,
   PopoverTrigger,
@@ -21,50 +20,66 @@ import { GrBlog } from "react-icons/gr";
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { DayContext } from "../../context/DayContext";
-import {useSelector,useDispatch} from 'react-redux'
-import { deleteProject, editProject,addNewProject } from "../../Redux/App_reducer/action";
+import { useSelector, useDispatch } from "react-redux";
+import { deleteProject, editProject } from "../../Redux/App_reducer/action";
 import Tasks from "./Tasks";
 const EditProject = () => {
-  const {newproject,projectRefNo} = useContext(DayContext)
+  const { projectRefNo } = useContext(DayContext);
   const [editText, setEditText] = useState(false);
-const dispatch = useDispatch()
-  const data = useSelector((state)=>state.App_reducer.project)
-//console.log(data)
+  const dispatch = useDispatch();
+  const data = useSelector((state) => state.App_reducer.project);
+  //console.log(data)
 
-let editData = data.find((e)=>e.refNO === projectRefNo)
- 
+  let editData = data.find((e) => e.refNO === projectRefNo);
+
   const navigate = useNavigate();
 
   const handleClose = () => {
-    dispatch(editProject(projectRefNo,text))
+    dispatch(editProject(projectRefNo, text));
     navigate("/calender");
   };
 
-  const handleDelte = ()=>{
-    dispatch(deleteProject(projectRefNo))
-    alert("Project Deleted")
-     
-    navigate("/calender")
-  }
-const [text,setText] = useState(editData.title)
+  const handleDelte = () => {
+    dispatch(deleteProject(projectRefNo));
+    alert("Project Deleted");
+
+    navigate("/calender");
+  };
+  const [text, setText] = useState(editData.title);
 
   return (
-    <Box w="90%" m="auto" marginTop={"50px"} boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"} h="45rem" border="1px solid lightgrey">
+    <Box
+      w="90%"
+      m="auto"
+      marginTop={"50px"}
+      boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"}
+      h="45rem"
+      border="1px solid lightgrey"
+    >
       <Box h="5rem" border="1px solid lightgrey">
         <Flex justifyContent={"space-between"} p="20px">
-          <Input fontSize={"40px"} h="50px" w="600px" value={text} onChange={(e)=>setText(e.target.value)} />
+          <Input
+            fontSize={"40px"}
+            h="50px"
+            w="600px"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          />
           <Flex alignItems={"center"} w={"600px"} justifyContent="space-around">
-          <Avatar border={"1px solid lightgrey"} bg="white" size={"md"}    />
-          <Button  variant='ghost'> <GrBlog marginLeft="20px"/> Blog Post</Button>
-          <Avatar  size={"md"} src='https://bit.ly/sage-adebayo' />
-          <Button  variant='ghost'>More Option</Button>
-            <DeleteIcon cursor={"pointer"}  onClick = {handleDelte} />
+            <Avatar border={"1px solid lightgrey"} bg="white" size={"md"} />
+            <Button variant="ghost">
+              {" "}
+              <GrBlog marginLeft="20px" /> Blog Post
+            </Button>
+            <Avatar size={"md"} src="https://bit.ly/sage-adebayo" />
+            <Button variant="ghost">More Option</Button>
+            <DeleteIcon cursor={"pointer"} onClick={handleDelte} />
             <CloseIcon cursor={"pointer"} onClick={handleClose} />
           </Flex>
         </Flex>
       </Box>
       <Flex>
-        <Box w="65%" h="40rem" >
+        <Box w="65%" h="40rem">
           {editText ? (
             <Editable
               p="20px"
@@ -76,12 +91,19 @@ const [text,setText] = useState(editData.title)
             </Editable>
           ) : null}
 
-         
           <Box marginTop="15%">
-          <Text fontSize={"25px"} colorScheme="grey">Let's get to work! </Text>
-<Text fontSize={"25px"} colorScheme="grey"> Organize your project by</Text>
-<Text fontSize={"25px"} colorScheme="grey"> adding custom attachments.</Text>
-            <Text fontSize={"20px"} >Attachment</Text>
+            <Text fontSize={"25px"} colorScheme="grey">
+              Let's get to work!{" "}
+            </Text>
+            <Text fontSize={"25px"} colorScheme="grey">
+              {" "}
+              Organize your project by
+            </Text>
+            <Text fontSize={"25px"} colorScheme="grey">
+              {" "}
+              adding custom attachments.
+            </Text>
+            <Text fontSize={"20px"}>Attachment</Text>
             <Popover>
               <PopoverTrigger>
                 <Button>
@@ -128,9 +150,9 @@ const [text,setText] = useState(editData.title)
             </Popover>
           </Box>
         </Box>
-        <Box   h="40rem" w="35%" border="1px solid lightgrey">
-        <Heading>Tasks</Heading>
-        <Tasks/>
+        <Box h="40rem" w="35%" border="1px solid lightgrey">
+          <Heading>Tasks</Heading>
+          <Tasks />
         </Box>
       </Flex>
     </Box>
