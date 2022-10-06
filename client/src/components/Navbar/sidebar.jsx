@@ -2,11 +2,8 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
     Flex,
-    Text,
     IconButton,
     Divider,
-    Avatar,
-    Heading
 } from '@chakra-ui/react'
 import {
     FiMenu,

@@ -5,12 +5,10 @@ import {
     Box,
     CircularProgress,
     CircularProgressLabel,
-    Button,
     Text,
-   Divider,
     Grid,
   } from '@chakra-ui/react';
-  import {FaCheckCircle,FaTimesCircle,FaAngleRight,FaTrophy} from "react-icons/fa"
+  // import {FaCheckCircle,FaTimesCircle,FaAngleRight,FaTrophy} from "react-icons/fa"
   
   
   
