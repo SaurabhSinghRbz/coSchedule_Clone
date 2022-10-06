@@ -6,11 +6,13 @@ import EditProject from "../components/calender/EditProject";
 import Homepage from "../components/HomePage/Homepage";
 import { Register } from "../components/register/Register";
 import { Login } from "../components/login/Login";
+import { Analytics } from "../components/analytics/analytics.js";
 const MainRoute = () => {
   return (
     <Routes>
-      <Route path="/homepage" element={<Homepage />} />
+      <Route path="/homepage" element={<Analytics />} />
       <Route path="/calender" element={<Calender />} />
+      
       <Route path="newproject" element={<CreateNewProject />} />
       <Route path="editproject" element={<EditProject />} />
       <Route path="/login" element={<Login />}></Route>
