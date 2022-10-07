@@ -11,6 +11,7 @@ import { FirstPage } from "../components/FirstPage/FirstPage";
 import { Welcome } from "../components/WelcomePage/Welcome";
 import { Analytics } from "../components/analytics/analytics";
 import { Homepage } from "../components/HomePage/home";
+import Account from "../components/setting/A/Account";
 export const LandingPage = () => {
   return (
     <div>
@@ -21,10 +22,11 @@ export const LandingPage = () => {
         <Route path="/analytics" element={<Analytics />} />
         <Route path="/home" element={<Homepage />} />
         <Route path="/calender" element={<Calender />} />
+        <Route path="/account" element={<Account />} />
         <Route path="newproject" element={<CreateNewProject />} />
         <Route path="editproject" element={<EditProject />} />
         <Route path="register-calendar" element={<FirstPage />} />
-        <Route path="welcome" element={<Welcome/>} />
+        <Route path="welcome" element={<Welcome />} />
       </Routes>
     </div>
   );
