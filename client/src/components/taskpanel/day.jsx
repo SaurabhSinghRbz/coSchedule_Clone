@@ -2,7 +2,14 @@ import { addDays, format, isToday, isTomorrow } from "date-fns";
 
 import { HiCheck } from "react-icons/hi";
 import { MdAdd } from "react-icons/md";
-
+import {
+  Editable,
+  EditableInput,
+  EditableTextarea,
+  EditablePreview,
+  Checkbox,
+  Flex
+} from '@chakra-ui/react'
 import styled from "styled-components";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -72,8 +79,7 @@ export const Month = () => {
     status: false,
     task: [],
   }));
-  console.log(shortWeekDaysArray);
-
+ 
   const handleinput = (date) => {
     let payload = {
       date: date,
@@ -89,7 +95,7 @@ export const Month = () => {
   const days = useSelector((state) => state.todosreducer.todos);
 
   return (
-    <div style={{ height: "700px" }}>
+    <div style={{ height: "fit-content" }}>
       <Toptaskdiv>
         <Card>
           <h1>
@@ -128,15 +134,22 @@ export const Month = () => {
                 setinput(e.target.value);
               }}
               onKeyPress={(eve) => {
-                eve.key == "Enter" && handleinput(e.date);
+                eve.key == "Enter" && handleinput(e.date) ;
+                eve.key == "Enter" && dispatch(AddInputBox(e.date));
               }}
             ></Input>
             <Taskdiv>
               <ul>
                 {e.task
                   ? e.task.map((task) => (
-                      <li style={{ color: "red" }}>{task}</li>
-                    ))
+                    <Flex>
+                    <Checkbox size="lg" marginEnd="3" colorScheme='red'>
+  </Checkbox>
+                    <Editable defaultValue={task} >
+                    <EditablePreview />
+                    
+                  </Editable>
+                   </Flex> ))
                   : null}
               </ul>
             </Taskdiv>
@@ -154,11 +167,32 @@ export const Month = () => {
                 {<MdAdd style={{ width: "fit-content", fill: "grey" }} />}
               </Add>
             </Card>
-            <input
+            <Input
               placeholder="Enter your task"
               style={{ display: e.status === true ? "inline" : "none" }}
-            ></input>
-            {e.tasklist ? e.task.map((task) => <li>{task}</li>) : null}
+              onChange={(e) => {
+                setinput(e.target.value);
+              }}
+              onKeyPress={(eve) => {
+                eve.key == "Enter" && handleinput(e.date);
+                eve.key == "Enter" && dispatch(AddInputBox(e.date));
+              }}
+            ></Input>
+            <Taskdiv>
+              <ul>
+                {e.task
+                  ? e.task.map((task) => (
+                    <Flex>
+                    <Checkbox size='lg' marginEnd="3" colorScheme='red'>
+  </Checkbox>
+                    <Editable defaultValue={task}>
+                    <EditablePreview />
+                    <EditableInput />
+                  </Editable>
+                   </Flex> ))
+                  : null}
+              </ul>
+            </Taskdiv>
           </div>
         ) : (
           <div key={e.date}>
@@ -173,10 +207,33 @@ export const Month = () => {
                 {<MdAdd style={{ width: "fit-content", fill: "grey" }} />}
               </Add>
             </Card>
-            <input
+            <Input
               placeholder="Enter your task"
               style={{ display: e.status === true ? "inline" : "none" }}
-            ></input>
+              onChange={(e) => {
+                setinput(e.target.value);
+              }}
+              onKeyPress={(eve) => {
+                eve.key == "Enter" && handleinput(e.date);
+                eve.key == "Enter" && dispatch(AddInputBox(e.date));
+              }}
+            ></Input>
+            <Taskdiv>
+              <ul>
+                {e.task
+                  ? e.task.map((task) => (
+                    <Flex>
+                    <Checkbox size='lg' marginEnd="3" colorScheme='red'>
+  </Checkbox>
+                    <Editable defaultValue={task} onChange={(e)=>{console.log(e.target.value)}}>
+                    <EditablePreview />
+                    <EditableInput />
+                   
+                  </Editable>
+                   </Flex> ))
+                  : null}
+              </ul>
+            </Taskdiv>
           </div>
         )
       )}
