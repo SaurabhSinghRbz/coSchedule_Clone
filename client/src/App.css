@@ -36,3 +36,97 @@
     transform: rotate(360deg);
   }
 }
+.account-details {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+.account-details .user-details-container {
+  display: flex;
+  padding: 30px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+}
+.user-details-container {
+  display: flex;
+  padding: 30px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+}
+.user-details-container .user-profile-picture img {
+  height: 90px;
+  width: 90px;
+  border-radius: 90px;
+  margin-right: 22.5px;
+}
+.user-details-container .user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.account-details-section {
+  margin-bottom: 60px;
+}
+.settings-section * {
+  box-sizing: border-box;
+}
+
+
+
+.notification-preferences .collapsible-item.collapsed {
+    min-height: 37px;
+    max-height: 37px;
+    overflow: hidden;
+}
+.notification-preferences .np-grid-container {
+  display: grid;
+  grid-template-columns: auto repeat(3,90px);
+  grid-template-rows: 35px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.notification-preferences .np-grid-container .np-grid-item.np-section-header {
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #f7f7f7;
+  border-bottom: none;
+  padding-left: 10px;
+}
+.notification-preferences .np-grid-container .np-grid-item.np-section-header.np-section-toggle .icon-chevron-up {
+  color: #999;
+  margin-right: 10px;
+  transform: rotate(0);
+  transition: all 150ms ease-out;
+}
+.notification-preferences .np-grid-container .np-grid-item.np-setting-column {
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.notification-preferences .np-grid-container .np-grid-item.np-setting-column {
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.notification-preferences .np-grid-container .np-grid-item.np-setting-column {
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.notification-preferences .np-grid-container .np-grid-item.np-section-header {
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #f7f7f7;
+  border-bottom: none;
+  padding-left: 10px;
+}
+.notification-preferences .np-grid-container {
+  display: grid;
+  grid-template-columns: auto repeat(3,90px);
+  grid-template-rows: 35px;
+  border-bottom: 1px solid #e6e6e6;
+}
