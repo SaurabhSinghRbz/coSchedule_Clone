@@ -323,7 +323,7 @@ const NAV_ITEMS = [
       },
       {
         label: (
-          <Link as={ReachLink} to="/MarkSuit">
+          <Link as={ReachLink} to="/marketing-suite">
             Marketing Suites
           </Link>
         ),

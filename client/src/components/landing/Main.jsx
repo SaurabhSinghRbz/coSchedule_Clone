@@ -144,7 +144,7 @@ const Main = () => {
               <Link
                 className={` ${styles.checkbtn} ${styles.top} `}
                 as={ReachLink}
-                to="/mtkcal"
+                to="/marketing-calendar"
               >
                 Explore More
               </Link>
@@ -181,7 +181,7 @@ const Main = () => {
               <Link
                 className={` ${styles.checkbtn}  `}
                 as={ReachLink}
-                to="/MarkSuit"
+                to="/marketing-suite"
               >
                 Explore More
               </Link>
