@@ -21,9 +21,12 @@ export default function Sidebar() {
     >
       <Flex
         flexDir="column"
-        w="100%"
         alignItems={navSize == "small" ? "center" : "flex-start"}
         as="nav"
+        align="center"
+        w="85%"
+        ml="auto"
+        mr="auto"
       >
         <IconButton
           background="none"
@@ -44,7 +47,7 @@ export default function Sidebar() {
         >
           <Link to="/" />
         </NavItem>
-        <Link to="/calender">
+        <Link to="/calender" style={{ width: "100%" }}>
           <NavItem
             navSize={navSize}
             color="white"
@@ -62,8 +65,8 @@ export default function Sidebar() {
         mb={4}
       >
         <Divider display={navSize == "small" ? "none" : "flex"} />
-        <Flex mt={4} align="center">
-          <Link to="/account">
+        <Flex mt={4} align="center" w="94%" ml="auto" mr="auto">
+          <Link to="/account" style={{ width: "100%" }}>
             <NavItem navSize={navSize} icon={FiSettings} title="Settings" />
           </Link>
         </Flex>
