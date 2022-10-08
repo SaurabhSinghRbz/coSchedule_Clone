@@ -229,7 +229,7 @@ export const Register = () => {
   }, []);
 
   const onChangeInput = (e) => {
-    // console.log(e.target)
+     console.log(e.target)
     const { id, value } = e.target;
     setUser({ ...user, [id]: value });
   };
@@ -238,12 +238,12 @@ export const Register = () => {
     // console.log("ee",e)
     axios
       .post(
-        "https://unit-5-backend-part.herokuapp.com/register",
-        user
-        // firstName: user.firstName,
-        // lastName: user.lastName,
-        // email: user.email,
-        // password: user.password,
+        "http://localhost:8080/api/auth/register",
+        
+         {firstName: user.firstName,
+         lastName: user.lastName,
+         email: user.email,
+         password: user.password,}
       )
       .then((res) => {
         setTimeout(() => {
@@ -375,9 +375,12 @@ export const Register = () => {
                 background: "RGBA(0, 0, 0, 0.80)",
                 transform: "scale(0.98)",
               }}
-              onClick={(e) => {
-                handleRegister(e);
-              }}
+              onClick={(e) => 
+                {
+                console.log(user)
+                handleRegister(e)
+              }
+              }
             >
               Submit
             </Button>

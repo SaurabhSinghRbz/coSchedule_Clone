@@ -242,13 +242,13 @@ export const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://unit-5-backend-part.herokuapp.com/login", user
+      .post("http://localhost:8080/api/auth/login", user
         // email: user.email,
         // password: user.password,
       )
       .then((res) => {
         localStorage.setItem("loginUser", JSON.stringify(res.data));
-        // console.log("data",res.data)
+        localStorage.setItem("data",res.data.data.data.email)
         dispatch(isLogin(res.data));
         setTimeout(() => {
           Navigate("/register-calendar");
