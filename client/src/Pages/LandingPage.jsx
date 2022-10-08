@@ -12,6 +12,8 @@ import { Welcome } from "../components/WelcomePage/Welcome";
 import { Analytics } from "../components/analytics/analytics";
 import { Homepage } from "../components/HomePage/home";
 import Account from "../components/setting/A/Account";
+import MarketingCalendar from "../components/Products/MarketingCalendar/MarketingCalendar";
+import MarketingSuite from "../components/Products/MarketingSuite/MarketingSuite";
 export const LandingPage = () => {
   return (
     <div>
@@ -21,6 +23,8 @@ export const LandingPage = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/analytics" element={<Analytics />} />
         <Route path="/home" element={<Homepage />} />
+        <Route path="/marketing-calendar" element={<MarketingCalendar />} />
+        <Route path="/marketing-suite" element={<MarketingSuite />} />
         <Route path="/calender" element={<Calender />} />
         <Route path="/account" element={<Account />} />
         <Route path="newproject" element={<CreateNewProject />} />
