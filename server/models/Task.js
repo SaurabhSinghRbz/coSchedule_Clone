@@ -6,8 +6,9 @@ const Task = new mongoose.Schema({
     color: { type: String,default: "white" },
     email: { type: String, required: true },
     subTasks: { type: Array, required: false },
-    date: { type: String, required: true },
-}, { timestamps: true });
+    date: { type: String, required: false },
+    refNO: { type: String, required: false },
+},{ versionKey: false});
 
 
 module.exports = mongoose.model('Task', Task);

@@ -33,7 +33,7 @@ const EditProject = () => {
 
   console.log(email)
 let taskpayload = {
-...data[0],email
+...data[data.length-1],email
 }
 console.log(taskpayload)
   let editData = data.find((e) => e.refNO === projectRefNo);
@@ -46,7 +46,12 @@ console.log(taskpayload)
     navigate("/calender");
   };
 
-  const handleDelte = () => {
+  const handleDelte = async () => {
+    // await axios.delete(`http://localhost:8080/tasks/projectRefNo/?email=${email}`)
+    fetch(`http://localhost:8080/api/tasks/${projectRefNo}/?email=${email}`,{
+      method: "DELETE"
+    }).then(() => console.log("Successfully deleted projectRefNo"))
+    .catch(() => console.log("Error deleting projectRefNo"))
     dispatch(deleteProject(projectRefNo));
     alert("Project Deleted");
 
