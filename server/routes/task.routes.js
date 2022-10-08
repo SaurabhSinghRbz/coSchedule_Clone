@@ -97,17 +97,17 @@ taskRouter.put('/:id', async (req, res) => {
 // Delete a Task
 taskRouter.delete('/:id', async (req, res) => {
     try {
-        const email = req.body.email;
+        const email = req.query.email;
         if (!email) {
             return res.status(400).json({ error: "Email is required" });
         }
-        const Task = await Task.findById(req.params.id);
-        if (!Task) {
+        let task = await Task.findOne({refNO: req.params.id});
+        if (!task) {
             return res.status(400).json({ error: "Task not found" });
         }
-        if (Task.email === req.body.email) {
+        if (task.email === req.query.email) {
             try {
-                await Task.delete();
+                await Task.findByIdAndDelete(task._id);
                 return res.status(200).send("Task has been deleted");
             } catch (error) {
                 return res.status(500).send({ error: error.message });
