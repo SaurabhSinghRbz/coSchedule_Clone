@@ -248,7 +248,7 @@ export const Login = () => {
       )
       .then((res) => {
         localStorage.setItem("loginUser", JSON.stringify(res.data));
-        // console.log("data",res.data)
+        localStorage.setItem("data",res.data.data.data.email)
         dispatch(isLogin(res.data));
         setTimeout(() => {
           Navigate("/register-calendar");

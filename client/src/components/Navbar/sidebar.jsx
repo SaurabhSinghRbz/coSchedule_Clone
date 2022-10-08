@@ -1,17 +1,21 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Flex, IconButton, Divider } from "@chakra-ui/react";
+import { Link, useNavigate } from "react-router-dom";
+import { Flex, IconButton, Divider,Box,Image,Select, Text } from "@chakra-ui/react";
 import { FiMenu, FiHome, FiCalendar, FiSettings } from "react-icons/fi";
 
 import NavItem from "./navitem";
+import { useSelector } from "react-redux";
 
 export default function Sidebar() {
   const [navSize, changeNavSize] = useState("small");
+  const {firstName, lastName} = useSelector((state)=>state.logger.isLogin.data.data)
+  let navigate = useNavigate()
   return (
     <Flex
       pos="sticky"
       left="0"
       h="95vh"
+     
       // marginTop="2.5vh"
       boxShadow="0 4px 12px 0 rgba(0, 0, 0, 0.05)"
       borderRadius={navSize == "small" ? "15px" : "30px"}
@@ -29,16 +33,50 @@ export default function Sidebar() {
         ml="auto"
         mr="auto"
       >
+        <Flex
+        justifyContent="center"
+        alignItems="center"
+        >
         <IconButton
           background="none"
           mt={5}
           _hover={{ background: "none" }}
-          icon={<FiMenu color="gray" />}
+          icon={<FiMenu color="gray" size="lg" />}
           onClick={() => {
             if (navSize == "small") changeNavSize("large");
             else changeNavSize("small");
           }}
         />
+        <Box
+        mt="5"
+        >
+        
+          <Select
+         size="sm"
+          display={navSize == "small" ? "none" : "inline"}
+          border="none"
+          onChange={(e)=>{
+        if(e.target.value==="logout"){
+       localStorage.clear();
+       navigate("/");
+        }
+          }}
+          placeholder={<Flex>
+          
+            <Image
+          src="#"
+          borderRadius="full"
+          h="10"
+          w="10"
+          ></Image>
+          <Text>{firstName+" "+ lastName}</Text>
+          
+          </Flex>}>
+  <option value='account'>Account</option>
+  <option value='logout' >Logout</option>
+</Select>
+        </Box>
+        </Flex>
         <NavItem
           onClick={"active"}
           navSize={navSize}

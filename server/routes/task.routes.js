@@ -5,7 +5,13 @@ const Task = require('../models/Task');
 
 // get all tasks by email
 taskRouter.get('/', async (req, res) => {
-    const email = req.body.email;
+    
+    let email;
+    if (req.query.email) {
+        email = req.query.email;
+    } else {
+        email = req.body.email;
+    }
     try {
         let tasks;
         if (email) {
