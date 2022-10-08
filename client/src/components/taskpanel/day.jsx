@@ -5,7 +5,6 @@ import { MdAdd } from "react-icons/md";
 import {
   Editable,
   EditableInput,
-  EditableTextarea,
   EditablePreview,
   Checkbox,
   Flex
