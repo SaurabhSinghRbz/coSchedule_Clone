@@ -10,12 +10,6 @@ taskRouter.get('/', async (req, res) => {
         let tasks;
         if (email) {
             tasks = await Task.find({ email });
-        } else if (catName) {
-            tasks = await Task.find({
-                categories: {
-                    $in: [catName],
-                },
-            });
         } else {
             tasks = await Task.find();
         }
