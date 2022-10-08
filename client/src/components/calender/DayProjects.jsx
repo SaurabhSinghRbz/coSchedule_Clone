@@ -21,13 +21,15 @@ const DayProjects = ({ title, refNO }) => {
       w="160"
       onClick={() => handleClick(refNO)}
       className="pro"
+      m={2}
     >
       <Text
         bg="lightyellow"
         display="flex"
-        fontSize={"20px"}
+        fontSize={"15px"}
         justifyContent="space-around"
         alignItems={"center"}
+        fontWeight="500"
         p="10px"
       >
         <GrBlog marginLeft="20px" /> Blog Post
@@ -37,11 +39,11 @@ const DayProjects = ({ title, refNO }) => {
         h="50px"
         p="10px"
         display="flex"
-        fontSize={"20px"}
+        fontSize={"15px"}
         justifyContent="space-around"
         alignItems={"center"}
       >
-        <Text fontSize={"25px"}>{title}</Text>
+        <Text fontSize={"14px"}>{title}</Text>
         <Avatar size={"sm"} src="https://bit.ly/sage-adebayo" />
       </Box>
     </Box>
