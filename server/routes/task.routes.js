@@ -5,7 +5,6 @@ const Task = require('../models/Task');
 
 // get all tasks by email
 taskRouter.get('/', async (req, res) => {
-    
     let email;
     if (req.query.email) {
         email = req.query.email;
@@ -28,7 +27,7 @@ taskRouter.get('/', async (req, res) => {
 
 taskRouter.get('/all', async (req, res) => {
     try {
-        tasks = await Task.find();
+        let tasks = await Task.find();
         return res.status(200).send(tasks);
     } catch (err) {
         return res.status(500).send(err);
