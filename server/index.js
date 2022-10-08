@@ -13,16 +13,16 @@ app.use(express.json());
 app.get('/', (req, res) => {
     return res.send({
         message: 'Welcome to my blog API',
-        registration: 'https://masai-blog-assignment.herokuapp.com/api/auth/register',
-        login: 'https://masai-blog-assignment.herokuapp.com/api/auth/login',
-        getAllUsers: "https://masai-blog-assignment.herokuapp.com/api/users",
-        getUserById: "https://masai-blog-assignment.herokuapp.com/api/users/:id",
-        updateUser: "https://masai-blog-assignment.herokuapp.com/api/users/:id",
-        getAllBlogs: "https://masai-blog-assignment.herokuapp.com/api/blogs",
-        getPostById: "https://masai-blog-assignment.herokuapp.com/api/blogs/:id",
-        createBlog: "https://masai-blog-assignment.herokuapp.com/api/blogs",
-        updateBlog: "https://masai-blog-assignment.herokuapp.com/api/blogs/:id",
-        deleteBlog: "https://masai-blog-assignment.herokuapp.com/api/blogs/:id"
+        registration: 'http://localhost:8080/api/auth/register',
+        login: 'http://localhost:8080/api/auth/login',
+        getAllUsers: "http://localhost:8080/api/users",
+        getUserById: "http://localhost:8080/api/users/:id",
+        updateUser: "http://localhost:8080/api/users/:id",
+        getAllBlogs: "http://localhost:8080/api/blogs",
+        getPostById: "http://localhost:8080/api/blogs/:id",
+        createBlog: "http://localhost:8080/api/blogs",
+        updateBlog: "http://localhost:8080/api/blogs/:id",
+        deleteBlog: "http://localhost:8080/api/blogs/:id"
     });
 });
 
