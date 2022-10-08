@@ -10,14 +10,15 @@ AuthRouter.post('/register', async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(req.body.password, salt);
     const newUser = new User({
-        username: req.body.username,
+        first_name: req.body.firstName,
+        Last_name: req.body.LastName,
         email: req.body.email,
         password: hashedPassword,
     });
     // alternate way to create a new user
     // const newUser = new User(req.body);
     try {
-        const user = await newUser.save();
+         let user = await newUser.save();
         return res.status(200).send(user);
     } catch (err) {
         return res.status(500).send(err);
