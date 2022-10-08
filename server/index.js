@@ -1,7 +1,7 @@
 const express = require('express');
 const database = require('./configs/db');
 const authRouter = require('./routes/auth');
-const postRouter = require('./routes/post.routes');
+const taskRouter = require('./routes/task.routes');
 const userRouter = require('./routes/user.routes');
 const cors = require('cors');
 
@@ -18,11 +18,11 @@ app.get('/', (req, res) => {
         getAllUsers: "http://localhost:8080/api/users",
         getUserById: "http://localhost:8080/api/users/:id",
         updateUser: "http://localhost:8080/api/users/:id",
-        getAllBlogs: "http://localhost:8080/api/blogs",
-        getPostById: "http://localhost:8080/api/blogs/:id",
-        createBlog: "http://localhost:8080/api/blogs",
-        updateBlog: "http://localhost:8080/api/blogs/:id",
-        deleteBlog: "http://localhost:8080/api/blogs/:id"
+        getAllTasks: "http://localhost:8080/api/tasks",
+        getTaskById: "http://localhost:8080/api/tasks/:id",
+        createTask: "http://localhost:8080/api/tasks",
+        updateTask: "http://localhost:8080/api/tasks/:id",
+        deleteTask: "http://localhost:8080/api/tasks/:id"
     });
 });
 
@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 
 app.use("/api/auth", authRouter);
 app.use("/api/users", userRouter);
-app.use("/api/blogs", postRouter);
+app.use("/api/tasks", taskRouter);
 
 
 const PORT = process.env.PORT || 8080;
