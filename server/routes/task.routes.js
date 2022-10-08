@@ -3,16 +3,26 @@ const User = require('../models/User');
 const Task = require('../models/Task');
 
 
-// get all tasks
+// get all tasks by email
 taskRouter.get('/', async (req, res) => {
-    const email = req.query.email;
+    const email = req.body.email;
     try {
         let tasks;
         if (email) {
             tasks = await Task.find({ email });
+            return res.status(200).send(tasks);
         } else {
-            tasks = await Task.find();
+            return res.status(400).send('Email is required, Please loggin first.');
         }
+
+    } catch (err) {
+        return res.status(500).send(err);
+    }
+});
+
+taskRouter.get('/all', async (req, res) => {
+    try {
+        tasks = await Task.find();
         return res.status(200).send(tasks);
     } catch (err) {
         return res.status(500).send(err);
@@ -32,11 +42,11 @@ taskRouter.get('/:id', async (req, res) => {
 // Create a Task
 taskRouter.post('/', async (req, res) => {
     try {
-        const username = req.body.username;
-        if (!username) {
-            return res.status(400).json({ error: "Username is required" });
+        const email = req.body.email;
+        if (!email) {
+            return res.status(400).json({ error: "Email is required" });
         }
-        const user = await User.findOne({ username });
+        const user = await User.findOne({ email });
         if (!user) {
             return res.status(400).json({ error: "User not found" });
         }
@@ -52,15 +62,15 @@ taskRouter.post('/', async (req, res) => {
 // Update a Task
 taskRouter.put('/:id', async (req, res) => {
     try {
-        const username = req.body.username;
-        if (!username) {
-            return res.status(400).json({ error: "Username is required" });
+        const email = req.body.email;
+        if (!email) {
+            return res.status(400).json({ error: "Email is required" });
         }
         const Task = await Task.findById(req.params.id);
         if (!Task) {
             return res.status(400).json({ error: "Task not found" });
         }
-        if (Task.username === req.body.username) {
+        if (Task.email === req.body.email) {
             try {
                 const updatedTask = await Task.findByIdAndUpdate(req.params.id, {
                     $set: req.body,
@@ -81,15 +91,15 @@ taskRouter.put('/:id', async (req, res) => {
 // Delete a Task
 taskRouter.delete('/:id', async (req, res) => {
     try {
-        const username = req.body.username;
-        if (!username) {
-            return res.status(400).json({ error: "Username is required" });
+        const email = req.body.email;
+        if (!email) {
+            return res.status(400).json({ error: "Email is required" });
         }
         const Task = await Task.findById(req.params.id);
         if (!Task) {
             return res.status(400).json({ error: "Task not found" });
         }
-        if (Task.username === req.body.username) {
+        if (Task.email === req.body.email) {
             try {
                 await Task.delete();
                 return res.status(200).send("Task has been deleted");
