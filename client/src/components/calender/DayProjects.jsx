@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "./day.css";
 import { GrBlog } from "react-icons/gr";
 
-const DayProjects = ({ title, refNO }) => {
+const DayProjects = ({ title, refNO,color }) => {
   const { setProjectrefNo } = useContext(DayContext);
   const navigate = useNavigate();
   const handleClick = (refNO) => {
@@ -40,6 +40,7 @@ const DayProjects = ({ title, refNO }) => {
         fontSize={"20px"}
         justifyContent="space-around"
         alignItems={"center"}
+        backgroundColor={color}
       >
         <Text fontSize={"25px"}>{title}</Text>
         <Avatar size={"sm"} src="https://bit.ly/sage-adebayo" />

@@ -10,8 +10,10 @@ AuthRouter.post('/register', async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(req.body.password, salt);
     const newUser = new User({
-        first_name: req.body.firstName,
-        Last_name: req.body.LastName,
+
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+
         email: req.body.email,
         password: hashedPassword,
     });

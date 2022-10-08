@@ -1,7 +1,6 @@
 const userRouter = require('express').Router();
 const User = require('../models/User');
 const bcrypt = require('bcrypt');
-const Post = require('../models/Post');
 
 
 // get all users
