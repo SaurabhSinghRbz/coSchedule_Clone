@@ -7,10 +7,12 @@ import {
     CircularProgressLabel,
     Text,
     Grid,
+    Icon,
+    Checkbox
   } from '@chakra-ui/react';
-  // import {FaCheckCircle,FaTimesCircle,FaAngleRight,FaTrophy} from "react-icons/fa"
+  import {FaCheckCircle,FaTimesCircle,FaAngleRight,FaTrophy} from "react-icons/fa"
   
-  
+  import {FiX} from 'react-icons/fi'
   
   import './gettingstarted.css'
   
@@ -33,7 +35,18 @@ export const Gettingstarted = ()=> {
       ? setprogress(progress + 20)
       : setprogress(progress - 20);
   }
-    
+  function CustomIcon(props) {
+    const { isIndeterminate, isChecked, ...rest } = props
+  
+    const d = isIndeterminate
+      ? <FiX/> : FaCheckCircle
+  
+    return (
+      <Icon as={d} left="2.5" top="2.5" size="xl" position="absolute">
+        
+      </Icon>
+    )
+  }
     return (
 
                 <Box
@@ -74,12 +87,15 @@ export const Gettingstarted = ()=> {
                         gap="10px"
                         className="getting-grid"
                       >
-                        <Box>
-                          <input
-                            className="checkbox-round"
-                            type="checkbox"
-                            onChange={(value) => handleCheck(value)}
-                          />
+                        <Box
+                       
+                        
+                        >
+                          <Checkbox className="checkbox-round" icon={<CustomIcon/>} 
+                          onChange={(value)=> handleCheck(value)}
+                          
+                          >
+    </Checkbox>
                         </Box>
                         <Box textAlign="left">
                           <Text fontSize="13px" fontWeight="semibold">
