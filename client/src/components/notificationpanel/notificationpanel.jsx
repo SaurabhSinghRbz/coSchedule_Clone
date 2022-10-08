@@ -33,7 +33,7 @@ export const Notificationpanel = () => {
   }, []);
   return (
     <Flex
-      mt="5"
+      mt="70px"
       w="30%"
       display={matches ? "block" : "none"}
       justifyContent="space-around"
