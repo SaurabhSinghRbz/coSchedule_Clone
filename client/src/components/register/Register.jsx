@@ -196,24 +196,17 @@ export const Register = () => {
               Submit
             </Button>
             <Stack pt={6}>
-              <a
-                href="http://localhost:8080/auth/google/"
-                // target="_blank"
-                rel="noreferrer"
+              <Button
+                borderWidth="1px"
+                alignItems="center"
+                fontWeight="600"
+                justifyContent="center"
+                backgroundColor="white"
+                w="100%"
               >
-                {" "}
-                <Button
-                  borderWidth="1px"
-                  alignItems="center"
-                  fontWeight="600"
-                  justifyContent="center"
-                  backgroundColor="white"
-                  w="100%"
-                >
-                  <Image src={googleIcon} w="30px" mr={2} />
-                  CONTINUE WITH GOOGLE
-                </Button>
-              </a>
+                <Image src={googleIcon} w="30px" mr={2} />
+                CONTINUE WITH GOOGLE
+              </Button>
 
               <Text align={"center"}>
                 Already a user?
