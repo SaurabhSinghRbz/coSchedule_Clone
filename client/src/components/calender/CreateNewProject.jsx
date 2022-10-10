@@ -104,8 +104,8 @@ const CreateNewProject = () => {
           placeholder="New Project Title"
           w="800px"
           h="70px"
-          p="20px 5px"
-          fontSize="50px"
+          p="20px 10px"
+          fontSize="35px"
           onChange={(e) => setText(e.target.value)}
         />
         <br />
