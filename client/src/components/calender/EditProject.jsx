@@ -253,7 +253,7 @@ const EditProject = () => {
               {" "}
               <GrBlog ml="20px" /> Blog Post
             </Button>
-            <Avatar size={"md"} src="https://bit.ly/sage-adebayo" />
+            <Avatar size={"md"} src="https://avatars.githubusercontent.com/u/90378786?v=4" />
             <Button variant="ghost">More Option</Button>
             <DeleteIcon cursor={"pointer"} onClick={handleDelte} />
             <CheckIcon cursor={"pointer"} onClick={handleClose} />

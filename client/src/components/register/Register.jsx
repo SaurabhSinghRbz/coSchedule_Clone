@@ -18,7 +18,6 @@ import axios from "axios";
 import React, { useEffect } from "react";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { FcGoogle } from "react-icons/fc";
 import googleIcon from "../../Assets/google.png";
 export const Register = () => {
   const toast = useToast();
@@ -61,7 +60,7 @@ export const Register = () => {
       .then((res) => {
         setTimeout(() => {
           Navigate("/login");
-        }, 2000);
+        }, 1000);
         setUser({
           firstName: "",
           lastName: "",
@@ -204,9 +203,7 @@ export const Register = () => {
                 justifyContent="center"
                 backgroundColor="white"
               >
-                <Box>
-                  <FcGoogle />
-                </Box>
+                <Image src={googleIcon} w="30px" mr={2} />
                 CONTINUE WITH GOOGLE
               </Button>
               <Text align={"center"}>
