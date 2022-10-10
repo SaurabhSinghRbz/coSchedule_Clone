@@ -67,8 +67,8 @@ const CreateNewProject = () => {
 
   return (
     <Box w="100%" h="28rem">
-      <Box ml={"1500px"} marginTop="30px">
-        <Link to="/">
+      <Box m={"auto"} marginTop="30px">
+        <Link to="/calender">
           <CloseIcon />
         </Link>
       </Box>
