@@ -66,18 +66,20 @@ taskRouter.post('/', async (req, res) => {
 
 // Update a Task
 taskRouter.put('/:id', async (req, res) => {
+    console.log(req.body);
     try {
-        const email = req.body.email;
+        const email = req.query.email;
         if (!email) {
             return res.status(400).json({ error: "Email is required" });
         }
-        const Task = await Task.findById(req.params.id);
-        if (!Task) {
+        let task = await Task.findOne({ refNO: req.params.id });
+        console.log(task);
+        if (!task) {
             return res.status(400).json({ error: "Task not found" });
         }
         if (Task.email === req.body.email) {
             try {
-                const updatedTask = await Task.findByIdAndUpdate(req.params.id, {
+                const updatedTask = await Task.findByIdAndUpdate(task._id, {
                     $set: req.body,
                 }, { new: true });
                 return res.status(200).send(updatedTask);
@@ -100,7 +102,7 @@ taskRouter.delete('/:id', async (req, res) => {
         if (!email) {
             return res.status(400).json({ error: "Email is required" });
         }
-        let task = await Task.findOne({refNO: req.params.id});
+        let task = await Task.findOne({ refNO: req.params.id });
         if (!task) {
             return res.status(400).json({ error: "Task not found" });
         }

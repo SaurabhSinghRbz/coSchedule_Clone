@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "./day.css";
 import { GrBlog } from "react-icons/gr";
 
-const DayProjects = ({ title, refNO,color }) => {
+const DayProjects = ({ title, refNO, color }) => {
   const { setProjectrefNo } = useContext(DayContext);
   const navigate = useNavigate();
   const handleClick = (refNO) => {
@@ -22,7 +22,6 @@ const DayProjects = ({ title, refNO,color }) => {
       m={2}
       onClick={() => handleClick(refNO)}
       className="pro"
-      m={2}
     >
       <Text
         bg="lightyellow"
@@ -33,7 +32,7 @@ const DayProjects = ({ title, refNO,color }) => {
         fontWeight="500"
         p="10px"
       >
-        <GrBlog marginLeft="20px" /> Blog Post
+        <GrBlog ml="20px" /> Blog Post
       </Text>
       <Box
         borderRadius="10px"

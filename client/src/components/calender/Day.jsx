@@ -46,7 +46,7 @@ const Day = ({ day, rowIdx }) => {
           {({ isOpen }) => (
             <>
               <MenuButton
-                isActive={isOpen}
+                // isActive={isOpen}
                 onClick={() => {
                   // console.log(day.format("MMM-DD"))
                   setDayschdule(`${day.format("DD-MMMM-YYYY")}`);
@@ -60,8 +60,8 @@ const Day = ({ day, rowIdx }) => {
         </Menu>
       </Flex>
       <Box>
-        {dayTask.map((e) => (
-          <DayProjects key={e.refNO} {...e} />
+        {dayTask.map((e, idx) => (
+          <DayProjects key={idx} {...e} />
         ))}
       </Box>
     </Box>

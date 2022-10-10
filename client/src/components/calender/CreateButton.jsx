@@ -12,9 +12,7 @@ const CreateButton = () => {
         <>
           <MenuButton
             fontSize={"19px"}
-            isActive={isOpen}
             onClick={() => {
-              // console.log(day.format("MMM-DD"))
               setDayschdule(`${dayjs().format("DD-MMMM-YYYY")}`);
             }}
           >
