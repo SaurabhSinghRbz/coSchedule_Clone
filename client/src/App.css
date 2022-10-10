@@ -71,6 +71,7 @@ input {
   position: relative;
   width: 100%;
   box-sizing: border-box;
+  padding-left: 15px !important;
 }
 
 .profile-image input {
