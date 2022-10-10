@@ -1,5 +1,9 @@
 # CoSchedule_Clone
 At CoSchedule, we provide marketers with tools & training that are uniquely helpful, fun to use, & consistently punch above their weight.
+Co schedule is an app used by marketing teams.Graphic designer, social media strategist. Co schedule is a family of Agile Marketing products that will help you organize your content,social,work and assets in one place. CoSchedule is going to help you spend less time on the unproductive parts of your job that you hate. By co schedule we can reprioritize to handle the new tasks.
+
+
+![CoSchedule_Logo](https://user-images.githubusercontent.com/90378786/194885425-faf156b0-bb07-4ddf-bc0d-3194124c5e5e.jpg)
 
 
 # The CoSchedule Story
