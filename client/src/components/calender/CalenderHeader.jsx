@@ -41,7 +41,7 @@ const CalenderHeader = () => {
 
         <Box
           display={"flex"}
-          marginLeft="5%"
+          ml="5%"
           justifyContent={"space-evenly"}
           w="400px"
         >
