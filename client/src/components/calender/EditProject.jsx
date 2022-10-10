@@ -5,8 +5,6 @@ import {
   Input,
   Popover,
   Button,
-  PopoverContent,
-  PopoverTrigger,
   Portal,
   Img,
   Editable,
@@ -15,6 +13,20 @@ import {
   Text,
   Avatar,
   Heading,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverHeader,
+  PopoverBody,
+  PopoverFooter,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverAnchor,
+  Select,
+  List,
+  ListItem,
+  
+  OrderedList,
+  UnorderedList,
 } from "@chakra-ui/react";
 import { GrBlog } from "react-icons/gr";
 import React, { useContext, useState } from "react";
@@ -30,7 +42,7 @@ const EditProject = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.App_reducer.project);
   const { email } = useSelector((state) => state.logger.isLogin.data.data);
-
+ const[color,setcolor]=useState('white')
   console.log(data, projectRefNo);
 
   let project = data.filter((element) => element.refNO === projectRefNo);
@@ -50,10 +62,11 @@ const EditProject = () => {
         body: JSON.stringify({
           ...project[0],
           title: text,
+          color: color
         }),
       }
     );
-    dispatch(editProject(projectRefNo, text));
+    dispatch(editProject(projectRefNo, text,color));
     navigate("/calender");
   };
 
@@ -92,7 +105,150 @@ const EditProject = () => {
             onChange={(e) => setText(e.target.value)}
           />
           <Flex alignItems={"center"} w={"600px"} justifyContent="space-around">
-            <Avatar border={"1px solid lightgrey"} bg="white" size={"md"} />
+           
+            <Popover>
+  <PopoverTrigger>
+  <Avatar border={"1px solid lightgrey"} bg={color} size={"md"} />
+  </PopoverTrigger>
+  <Portal>
+    <PopoverContent>
+      <PopoverArrow />
+      
+      <PopoverCloseButton />
+      <PopoverBody >
+      <List >
+  <ListItem m="auto"  justifyContent="center" alignItem="center">
+    <Flex
+     m="5"
+     justifyContent="left"
+     alignItem="center">
+      <Button
+      h="10"
+      w="10"
+      borderRadius="full"
+      bg="#B12EEE"
+      m="2"
+      onClick={()=>{
+ setcolor("#B12EEE")
+
+      }}
+      >
+
+      </Button>
+      <Text
+      m="4">Color label 1</Text>
+    </Flex>
+  </ListItem>
+  <ListItem m="auto"   justifyContent="center" alignItem="center"> <Flex
+  m="5"
+  justifyContent="left"
+  alignItem="center"
+  >
+      <Button
+      h="10"
+      w="10"
+      borderRadius="full"
+      bg="#1D84FC"
+      m="2"
+      onClick={()=>{
+        setcolor("#1D84FC")
+       
+             }}
+      >
+
+      </Button>
+      <Text
+       m="4">Color label 2</Text>
+    </Flex></ListItem>
+  <ListItem m="auto"   justifyContent="center" alignItem="center"><Flex
+   m="5"
+   justifyContent="left"
+   alignItem="center">
+      <Button
+      h="10"
+      w="10"
+      borderRadius="full"
+      bg="#FF8917"
+      m="2"
+      onClick={()=>{
+        setcolor("#FF8917")
+       
+             }}
+      >
+
+      </Button>
+      <Text
+      m="4">Color label 3</Text>
+    </Flex></ListItem>
+    <ListItem m="auto"   justifyContent="center" alignItem="center"> <Flex
+  m="5"
+  justifyContent="left"
+  alignItem="center"
+  >
+      <Button
+      h="10"
+      w="10"
+      borderRadius="full"
+      bg="green"
+      m="2"
+      onClick={()=>{
+        setcolor("green")
+       
+             }}
+      >
+
+      </Button>
+      <Text
+       m="4">Color label 4</Text>
+    </Flex></ListItem>
+    <ListItem m="auto"   justifyContent="center" alignItem="center"> <Flex
+  m="5"
+  justifyContent="left"
+  alignItem="center"
+  >
+      <Button
+      h="10"
+      w="10"
+      borderRadius="full"
+      bg="red"
+      m="2"
+      onClick={()=>{
+        setcolor("red")
+       
+             }}
+      >
+
+      </Button>
+      <Text
+       m="4">Color label 5</Text>
+    </Flex></ListItem>
+  
+  <ListItem m="auto"   justifyContent="center" alignItem="center"><Flex
+   m="5"
+   justifyContent="left"
+   alignItem="center">
+      <Button
+      h="10"
+      w="10"
+      borderRadius="full"
+      bg="white"
+      m="2"
+      onClick={()=>{
+        setcolor("white")
+       
+             }}
+      >
+
+      </Button>
+      <Text
+      m="4">No label</Text>
+    </Flex></ListItem>
+</List>
+      </PopoverBody>
+      
+    </PopoverContent>
+  </Portal>
+</Popover>
             <Button variant="ghost">
               {" "}
               <GrBlog ml="20px" /> Blog Post

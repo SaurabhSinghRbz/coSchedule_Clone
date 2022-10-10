@@ -18,7 +18,7 @@ export const reducer = (state = initialState, { type, payload }) => {
     case types.EDIT_PROJECT:
       let editedArray = state.project.map((e) => {
         if (e.refNO === payload[0]) {
-          return { ...e, title: payload[1] }
+          return { ...e, title: payload[1] , color: payload[2] }
         }
         else {
           return e

@@ -19,7 +19,7 @@ const Calender = () => {
           res.map((element) => {
             const payload = {
               title: element.title,
-              color: "white",
+              color: element.color,
               date: element.date,
               refNO: element.refNO,
             };
