@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect } from "react";
-import { Link as RouterLink, useNavigate } from "react-router-dom";
+import { Link, Link as RouterLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import googleIcon from "../../Assets/google.png";
 export const Register = () => {
@@ -126,7 +126,7 @@ export const Register = () => {
             <Input
               focusBorderColor="RGBA(0, 0, 0, 0.64)"
               id="firstName"
-              type="email"
+              type="text"
               placeholder="Enter first name"
               value={user.firstName}
               onChange={(e) => {
@@ -196,16 +196,25 @@ export const Register = () => {
               Submit
             </Button>
             <Stack pt={6}>
-              <Button
-                borderWidth="1px"
-                alignItems="center"
-                fontWeight="600"
-                justifyContent="center"
-                backgroundColor="white"
+              <a
+                href="http://localhost:8080/auth/google/"
+                // target="_blank"
+                rel="noreferrer"
               >
-                <Image src={googleIcon} w="30px" mr={2} />
-                CONTINUE WITH GOOGLE
-              </Button>
+                {" "}
+                <Button
+                  borderWidth="1px"
+                  alignItems="center"
+                  fontWeight="600"
+                  justifyContent="center"
+                  backgroundColor="white"
+                  w="100%"
+                >
+                  <Image src={googleIcon} w="30px" mr={2} />
+                  CONTINUE WITH GOOGLE
+                </Button>
+              </a>
+
               <Text align={"center"}>
                 Already a user?
                 <RouterLink to="/login" color={"blue.400"}>
