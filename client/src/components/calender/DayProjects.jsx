@@ -48,7 +48,7 @@ const DayProjects = ({ title, refNO, color }) => {
 
         <Avatar
           size={"sm"}
-          src="https://avatars.githubusercontent.com/u/90378786?v=4"
+          src="https://w1.pngwing.com/pngs/743/500/png-transparent-circle-silhouette-logo-user-user-profile-green-facial-expression-nose-cartoon.png"
         />
       </Box>
     </Box>
