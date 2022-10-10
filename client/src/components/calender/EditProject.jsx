@@ -29,29 +29,47 @@ const EditProject = () => {
   const [editText, setEditText] = useState(false);
   const dispatch = useDispatch();
   const data = useSelector((state) => state.App_reducer.project);
-  const {email} = useSelector((state)=>state.logger.isLogin.data.data)
+  const { email } = useSelector((state) => state.logger.isLogin.data.data);
 
-  console.log(email)
-let taskpayload = {
-...data[data.length-1],email
-}
-console.log(taskpayload)
+  console.log(data, projectRefNo);
+
+  let project = data.filter((element) => element.refNO === projectRefNo);
+  console.log(project);
   let editData = data.find((e) => e.refNO === projectRefNo);
 
   const navigate = useNavigate();
 
-  const handleClose = async() => {
-    await axios.post(`http://localhost:8080/api/tasks`,taskpayload)
+  const handleClose = async () => {
+    await fetch(
+      `http://localhost:8080/api/tasks/${projectRefNo}/?email=${email}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...project[0],
+          title: text,
+        }),
+      }
+    );
+
+    // await axios.put(
+    //   `http://localhost:8080/api/tasks/${projectRefNo}`,
+    //   taskpayload
+    // );
     dispatch(editProject(projectRefNo, text));
     navigate("/calender");
   };
 
   const handleDelte = async () => {
+    console.log("ProjectRedNo", projectRefNo);
     // await axios.delete(`http://localhost:8080/tasks/projectRefNo/?email=${email}`)
-    fetch(`http://localhost:8080/api/tasks/${projectRefNo}/?email=${email}`,{
-      method: "DELETE"
-    }).then(() => console.log("Successfully deleted projectRefNo"))
-    .catch(() => console.log("Error deleting projectRefNo"))
+    fetch(`http://localhost:8080/api/tasks/${projectRefNo}/?email=${email}`, {
+      method: "DELETE",
+    })
+      .then(() => console.log("Successfully deleted projectRefNo"))
+      .catch(() => console.log("Error deleting projectRefNo"));
     dispatch(deleteProject(projectRefNo));
     alert("Project Deleted");
 
@@ -81,7 +99,7 @@ console.log(taskpayload)
             <Avatar border={"1px solid lightgrey"} bg="white" size={"md"} />
             <Button variant="ghost">
               {" "}
-              <GrBlog marginLeft="20px" /> Blog Post
+              <GrBlog ml="20px" /> Blog Post
             </Button>
             <Avatar size={"md"} src="https://bit.ly/sage-adebayo" />
             <Button variant="ghost">More Option</Button>
@@ -124,7 +142,7 @@ console.log(taskpayload)
               </PopoverTrigger>
               <Portal>
                 <PopoverContent
-                  marginLeft="-300px"
+                  ml="-300px"
                   marginTop="30px"
                   gap="50px"
                   flexDirection="row"
