@@ -1,4 +1,4 @@
-import { CloseIcon, DeleteIcon, EditIcon } from "@chakra-ui/icons";
+import { CheckIcon, CloseIcon, DeleteIcon, EditIcon } from "@chakra-ui/icons";
 import {
   Box,
   Flex,
@@ -53,11 +53,6 @@ const EditProject = () => {
         }),
       }
     );
-
-    // await axios.put(
-    //   `http://localhost:8080/api/tasks/${projectRefNo}`,
-    //   taskpayload
-    // );
     dispatch(editProject(projectRefNo, text));
     navigate("/calender");
   };
@@ -81,10 +76,11 @@ const EditProject = () => {
     <Box
       w="90%"
       m="auto"
-      marginTop={"50px"}
+      marginTop={"30px"}
       boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"}
-      h="45rem"
+      h="auto"
       border="1px solid lightgrey"
+      mb={"30px"}
     >
       <Box h="5rem" border="1px solid lightgrey">
         <Flex justifyContent={"space-between"} p="20px">
@@ -104,7 +100,7 @@ const EditProject = () => {
             <Avatar size={"md"} src="https://bit.ly/sage-adebayo" />
             <Button variant="ghost">More Option</Button>
             <DeleteIcon cursor={"pointer"} onClick={handleDelte} />
-            <CloseIcon cursor={"pointer"} onClick={handleClose} />
+            <CheckIcon cursor={"pointer"} onClick={handleClose} />
           </Flex>
         </Flex>
       </Box>

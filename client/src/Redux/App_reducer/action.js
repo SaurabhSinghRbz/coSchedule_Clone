@@ -16,3 +16,7 @@ export const editProject = (refNO, text) => (dispatch) => {
 export const deleteProject = (refNO) => (dispatch) => {
     dispatch({ type: types.Delete_PROJECT, payload: refNO })
 }
+
+export const resetState = () => (dispatch) => {
+    dispatch({ type: types.RESET_STATE })
+}

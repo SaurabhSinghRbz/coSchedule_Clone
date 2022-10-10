@@ -35,9 +35,9 @@ const DayProjects = ({ title, refNO, color }) => {
         <GrBlog ml="20px" /> Blog Post
       </Text>
       <Box
-        borderRadius="10px"
-        h="50px"
-        p="10px"
+        borderRadius="0 0 10px 10px"
+        h="fit-content"
+        p="5px 10px"
         display="flex"
         fontSize={"15px"}
         justifyContent="space-around"

@@ -67,8 +67,8 @@ const CreateNewProject = () => {
 
   return (
     <Box w="100%" h="28rem">
-      <Box ml={"1500px"} marginTop="30px">
-        <Link to="/">
+      <Box m={"auto"} marginTop="30px">
+        <Link to="/calender">
           <CloseIcon />
         </Link>
       </Box>
@@ -104,8 +104,8 @@ const CreateNewProject = () => {
           placeholder="New Project Title"
           w="800px"
           h="70px"
-          p="20px 5px"
-          fontSize="50px"
+          p="20px 10px"
+          fontSize="35px"
           onChange={(e) => setText(e.target.value)}
         />
         <br />
