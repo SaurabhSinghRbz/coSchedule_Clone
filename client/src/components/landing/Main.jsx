@@ -16,7 +16,7 @@ const Main = () => {
         Get more done in less time with the only work management software
         for&nbsp;marketers.
       </p>
-      <Link className={styles.button} as={ReachLink} to="/Calender">
+      <Link className={styles.button} as={ReachLink} to="/register">
         Get Started Free
       </Link>
 
@@ -226,7 +226,7 @@ const Main = () => {
               <Link
                 className={` ${styles.checkbtn2}  `}
                 as={ReachLink}
-                to="/mtkcal"
+                to="/marketingcalendar"
               >
                 Explore More
               </Link>
@@ -347,7 +347,7 @@ const Main = () => {
           Organize all of your marketing in one&nbsp;place
         </h2>
 
-        <Link className={styles.lastbtn} as={ReachLink} to="/Calender">
+        <Link className={styles.lastbtn} as={ReachLink} to="/register">
           Get Started Free
         </Link>
       </div>
