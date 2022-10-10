@@ -112,7 +112,7 @@ export default function WithSubnavigation() {
           >
             <Link
               as={ReachLink}
-              to="/demo"
+              to="/register"
               style={{ fontWeight: "bold", fontSize: "15px" }}
             >
               Get A Demo
@@ -312,7 +312,7 @@ const NAV_ITEMS = [
     children: [
       {
         label: (
-          <Link as={ReachLink} to="/mtkcal">
+          <Link as={ReachLink} to="/marketing-calendar">
             Marketing Calender
           </Link>
         ),
