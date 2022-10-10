@@ -68,7 +68,7 @@
 //         });
 //       })
 //       .catch((e) => {
-       
+
 //         toast({
 //           title: "Login Failed !!!",
 //           status: "error",
@@ -158,7 +158,7 @@
 //               onClick={(e) => {
 //                 handleSubmit(e);
 //               }}
-              
+
 //             >
 //               Login
 //             </Button>
@@ -207,13 +207,14 @@ import {
   useMediaQuery,
   useToast,
   Spinner,
+  Image,
 } from "@chakra-ui/react";
 import React from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { isLogin } from "../../Redux/logger/action";
-import {Link as RouterLink, useNavigate } from "react-router-dom";
-
+import { Link as RouterLink, useNavigate } from "react-router-dom";
+import googleIcon from "../../Assets/google.png";
 import { useEffect, useState } from "react";
 export const Login = () => {
   const [isLargerThan992] = useMediaQuery("(min-width: 992px)");
@@ -242,13 +243,15 @@ export const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8080/api/auth/login", user
+      .post(
+        "http://localhost:8080/api/auth/login",
+        user
         // email: user.email,
         // password: user.password,
       )
       .then((res) => {
         localStorage.setItem("loginUser", JSON.stringify(res.data));
-        localStorage.setItem("data",res.data.data.data.email)
+        localStorage.setItem("data", res.data.data.data.email);
         dispatch(isLogin(res.data));
         setTimeout(() => {
           Navigate("/register-calendar");
@@ -266,7 +269,6 @@ export const Login = () => {
         });
       })
       .catch((e) => {
-       
         toast({
           title: "Login Failed !!!",
           status: "error",
@@ -302,11 +304,11 @@ export const Login = () => {
           </Heading>
           <FormControl
             w={isLargerThan992 ? "30%" : "70%"}
-            h="350px"
+            h="auto"
             margin="auto"
             boxShadow="rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px"
             borderRadius="lg"
-            p={"3"}
+            p={5}
             cursor="pointer"
             mt={5}
           >
@@ -347,7 +349,7 @@ export const Login = () => {
               }}
               transform="scale(0.98)"
               background="#f37e5d"
-              width="200px"
+              width="100%"
               _hover={{
                 bg: "#f5f6f7",
                 background: "RGBA(0, 0, 0, 0.80)",
@@ -358,6 +360,18 @@ export const Login = () => {
               }}
             >
               Login
+            </Button>
+            <Button
+              borderWidth="1px"
+              alignItems="center"
+              fontWeight="600"
+              justifyContent="center"
+              backgroundColor="white"
+              w="100%"
+              mt={5}
+            >
+              <Image src={googleIcon} w="30px" mr={2} />
+              CONTINUE WITH GOOGLE
             </Button>
             <Stack pt={6}>
               <Text align={"center"}>

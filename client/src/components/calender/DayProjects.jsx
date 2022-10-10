@@ -46,7 +46,10 @@ const DayProjects = ({ title, refNO, color }) => {
       >
         <Text fontSize={"14px"}>{title}</Text>
 
-        <Avatar size={"sm"} src="https://bit.ly/sage-adebayo" />
+        <Avatar
+          size={"sm"}
+          src="https://avatars.githubusercontent.com/u/90378786?v=4"
+        />
       </Box>
     </Box>
   );

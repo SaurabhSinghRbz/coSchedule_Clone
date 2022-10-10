@@ -16,7 +16,9 @@ import { useSelector } from "react-redux";
 
 export default function Sidebar() {
   const [navSize, changeNavSize] = useState("small");
-  // const {firstName, lastName} = useSelector((state)=>state.logger.isLogin.data.data)
+  const { firstName, lastName } = useSelector(
+    (state) => state.logger.isLogin.data.data
+  );
   let navigate = useNavigate();
   return (
     <Flex
@@ -27,7 +29,7 @@ export default function Sidebar() {
       boxShadow="0 4px 12px 0 rgba(0, 0, 0, 0.05)"
       borderRadius={navSize == "small" ? "15px" : "30px"}
       borderRightRadius="0px"
-      w={navSize == "small" ? "75px" : "200px"}
+      w={navSize == "small" ? "75px" : "240px"}
       flexDir="column"
       justifyContent="space-between"
     >
@@ -62,10 +64,11 @@ export default function Sidebar() {
                   navigate("/");
                 }
               }}
+              w="fit-content"
               placeholder={
                 <Flex>
-                  <Image src="#" borderRadius="full" h="10" w="10"></Image>
-                  <Text>Saurabh Singh</Text>
+                  {/* <Image src="#" borderRadius="full" h="10" w="10"></Image> */}
+                  <Text>{firstName + " " + lastName}</Text>
                 </Flex>
               }
             >
