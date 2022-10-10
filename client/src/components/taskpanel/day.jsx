@@ -146,6 +146,7 @@ export const Month = () => {
   </Checkbox>
                     <Editable defaultValue={task} >
                     <EditablePreview />
+                    <EditableInput w="full" mr="10"/>
                     
                   </Editable>
                    </Flex> ))
@@ -186,7 +187,7 @@ export const Month = () => {
   </Checkbox>
                     <Editable defaultValue={task}>
                     <EditablePreview />
-                    <EditableInput />
+                    <EditableInput w="full" mr="10"/>
                   </Editable>
                    </Flex> ))
                   : null}
@@ -226,7 +227,7 @@ export const Month = () => {
   </Checkbox>
                     <Editable defaultValue={task} onChange={(e)=>{console.log(e.target.value)}}>
                     <EditablePreview />
-                    <EditableInput />
+                    <EditableInput w="full" mr="10"/>
                    
                   </Editable>
                    </Flex> ))

@@ -87,15 +87,12 @@ export const Gettingstarted = ()=> {
                         gap="10px"
                         className="getting-grid"
                       >
-                        <Box
-                       
-                        
-                        >
-                          <Checkbox className="checkbox-round" icon={<CustomIcon/>} 
-                          onChange={(value)=> handleCheck(value)}
-                          
-                          >
-    </Checkbox>
+                        <Box>
+                          <input
+                            className="checkbox-round"
+                            type="checkbox"
+                            onChange={(value) => handleCheck(value)}
+                          />
                         </Box>
                         <Box textAlign="left">
                           <Text fontSize="13px" fontWeight="semibold">
