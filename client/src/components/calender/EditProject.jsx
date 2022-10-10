@@ -24,7 +24,6 @@ import {
   Select,
   List,
   ListItem,
-  
   OrderedList,
   UnorderedList,
 } from "@chakra-ui/react";
@@ -42,7 +41,7 @@ const EditProject = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.App_reducer.project);
   const { email } = useSelector((state) => state.logger.isLogin.data.data);
- const[color,setcolor]=useState('white')
+  const [color, setcolor] = useState("white");
   console.log(data, projectRefNo);
 
   let project = data.filter((element) => element.refNO === projectRefNo);
@@ -53,7 +52,7 @@ const EditProject = () => {
 
   const handleClose = async () => {
     await fetch(
-      `http://localhost:8080/api/tasks/${projectRefNo}/?email=${email}`,
+      `https://coschedule-api.herokuapp.com/api/tasks/${projectRefNo}/?email=${email}`,
       {
         method: "PUT",
         headers: {
@@ -62,20 +61,23 @@ const EditProject = () => {
         body: JSON.stringify({
           ...project[0],
           title: text,
-          color: color
+          color: color,
         }),
       }
     );
-    dispatch(editProject(projectRefNo, text,color));
+    dispatch(editProject(projectRefNo, text, color));
     navigate("/calender");
   };
 
   const handleDelte = async () => {
     console.log("ProjectRedNo", projectRefNo);
-    // await axios.delete(`http://localhost:8080/tasks/projectRefNo/?email=${email}`)
-    fetch(`http://localhost:8080/api/tasks/${projectRefNo}/?email=${email}`, {
-      method: "DELETE",
-    })
+    // await axios.delete(`https://coschedule-api.herokuapp.com/tasks/projectRefNo/?email=${email}`)
+    fetch(
+      `https://coschedule-api.herokuapp.com/api/tasks/${projectRefNo}/?email=${email}`,
+      {
+        method: "DELETE",
+      }
+    )
       .then(() => console.log("Successfully deleted projectRefNo"))
       .catch(() => console.log("Error deleting projectRefNo"));
     dispatch(deleteProject(projectRefNo));
@@ -105,155 +107,148 @@ const EditProject = () => {
             onChange={(e) => setText(e.target.value)}
           />
           <Flex alignItems={"center"} w={"600px"} justifyContent="space-around">
-           
             <Popover>
-  <PopoverTrigger>
-  <Avatar border={"1px solid lightgrey"} bg={color} size={"md"} />
-  </PopoverTrigger>
-  <Portal>
-    <PopoverContent>
-      <PopoverArrow />
-      
-      <PopoverCloseButton />
-      <PopoverBody >
-      <List >
-  <ListItem m="auto"  justifyContent="center" alignItem="center">
-    <Flex
-     m="5"
-     justifyContent="left"
-     alignItem="center">
-      <Button
-      h="10"
-      w="10"
-      borderRadius="full"
-      bg="#B12EEE"
-      m="2"
-      onClick={()=>{
- setcolor("#B12EEE")
+              <PopoverTrigger>
+                <Avatar border={"1px solid lightgrey"} bg={color} size={"md"} />
+              </PopoverTrigger>
+              <Portal>
+                <PopoverContent>
+                  <PopoverArrow />
 
-      }}
-      >
+                  <PopoverCloseButton />
+                  <PopoverBody>
+                    <List>
+                      <ListItem
+                        m="auto"
+                        justifyContent="center"
+                        alignItem="center"
+                      >
+                        <Flex m="5" justifyContent="left" alignItem="center">
+                          <Button
+                            h="10"
+                            w="10"
+                            borderRadius="full"
+                            bg="#B12EEE"
+                            m="2"
+                            onClick={() => {
+                              setcolor("#B12EEE");
+                            }}
+                          ></Button>
+                          <Text m="4">Color label 1</Text>
+                        </Flex>
+                      </ListItem>
+                      <ListItem
+                        m="auto"
+                        justifyContent="center"
+                        alignItem="center"
+                      >
+                        {" "}
+                        <Flex m="5" justifyContent="left" alignItem="center">
+                          <Button
+                            h="10"
+                            w="10"
+                            borderRadius="full"
+                            bg="#1D84FC"
+                            m="2"
+                            onClick={() => {
+                              setcolor("#1D84FC");
+                            }}
+                          ></Button>
+                          <Text m="4">Color label 2</Text>
+                        </Flex>
+                      </ListItem>
+                      <ListItem
+                        m="auto"
+                        justifyContent="center"
+                        alignItem="center"
+                      >
+                        <Flex m="5" justifyContent="left" alignItem="center">
+                          <Button
+                            h="10"
+                            w="10"
+                            borderRadius="full"
+                            bg="#FF8917"
+                            m="2"
+                            onClick={() => {
+                              setcolor("#FF8917");
+                            }}
+                          ></Button>
+                          <Text m="4">Color label 3</Text>
+                        </Flex>
+                      </ListItem>
+                      <ListItem
+                        m="auto"
+                        justifyContent="center"
+                        alignItem="center"
+                      >
+                        {" "}
+                        <Flex m="5" justifyContent="left" alignItem="center">
+                          <Button
+                            h="10"
+                            w="10"
+                            borderRadius="full"
+                            bg="green"
+                            m="2"
+                            onClick={() => {
+                              setcolor("green");
+                            }}
+                          ></Button>
+                          <Text m="4">Color label 4</Text>
+                        </Flex>
+                      </ListItem>
+                      <ListItem
+                        m="auto"
+                        justifyContent="center"
+                        alignItem="center"
+                      >
+                        {" "}
+                        <Flex m="5" justifyContent="left" alignItem="center">
+                          <Button
+                            h="10"
+                            w="10"
+                            borderRadius="full"
+                            bg="red"
+                            m="2"
+                            onClick={() => {
+                              setcolor("red");
+                            }}
+                          ></Button>
+                          <Text m="4">Color label 5</Text>
+                        </Flex>
+                      </ListItem>
 
-      </Button>
-      <Text
-      m="4">Color label 1</Text>
-    </Flex>
-  </ListItem>
-  <ListItem m="auto"   justifyContent="center" alignItem="center"> <Flex
-  m="5"
-  justifyContent="left"
-  alignItem="center"
-  >
-      <Button
-      h="10"
-      w="10"
-      borderRadius="full"
-      bg="#1D84FC"
-      m="2"
-      onClick={()=>{
-        setcolor("#1D84FC")
-       
-             }}
-      >
-
-      </Button>
-      <Text
-       m="4">Color label 2</Text>
-    </Flex></ListItem>
-  <ListItem m="auto"   justifyContent="center" alignItem="center"><Flex
-   m="5"
-   justifyContent="left"
-   alignItem="center">
-      <Button
-      h="10"
-      w="10"
-      borderRadius="full"
-      bg="#FF8917"
-      m="2"
-      onClick={()=>{
-        setcolor("#FF8917")
-       
-             }}
-      >
-
-      </Button>
-      <Text
-      m="4">Color label 3</Text>
-    </Flex></ListItem>
-    <ListItem m="auto"   justifyContent="center" alignItem="center"> <Flex
-  m="5"
-  justifyContent="left"
-  alignItem="center"
-  >
-      <Button
-      h="10"
-      w="10"
-      borderRadius="full"
-      bg="green"
-      m="2"
-      onClick={()=>{
-        setcolor("green")
-       
-             }}
-      >
-
-      </Button>
-      <Text
-       m="4">Color label 4</Text>
-    </Flex></ListItem>
-    <ListItem m="auto"   justifyContent="center" alignItem="center"> <Flex
-  m="5"
-  justifyContent="left"
-  alignItem="center"
-  >
-      <Button
-      h="10"
-      w="10"
-      borderRadius="full"
-      bg="red"
-      m="2"
-      onClick={()=>{
-        setcolor("red")
-       
-             }}
-      >
-
-      </Button>
-      <Text
-       m="4">Color label 5</Text>
-    </Flex></ListItem>
-  
-  <ListItem m="auto"   justifyContent="center" alignItem="center"><Flex
-   m="5"
-   justifyContent="left"
-   alignItem="center">
-      <Button
-      h="10"
-      w="10"
-      borderRadius="full"
-      bg="white"
-      m="2"
-      onClick={()=>{
-        setcolor("white")
-       
-             }}
-      >
-
-      </Button>
-      <Text
-      m="4">No label</Text>
-    </Flex></ListItem>
-</List>
-      </PopoverBody>
-      
-    </PopoverContent>
-  </Portal>
-</Popover>
+                      <ListItem
+                        m="auto"
+                        justifyContent="center"
+                        alignItem="center"
+                      >
+                        <Flex m="5" justifyContent="left" alignItem="center">
+                          <Button
+                            h="10"
+                            w="10"
+                            borderRadius="full"
+                            bg="white"
+                            m="2"
+                            onClick={() => {
+                              setcolor("white");
+                            }}
+                          ></Button>
+                          <Text m="4">No label</Text>
+                        </Flex>
+                      </ListItem>
+                    </List>
+                  </PopoverBody>
+                </PopoverContent>
+              </Portal>
+            </Popover>
             <Button variant="ghost">
               {" "}
               <GrBlog ml="20px" /> Blog Post
             </Button>
-            <Avatar size={"md"} src="https://avatars.githubusercontent.com/u/90378786?v=4" />
+            <Avatar
+              size={"md"}
+              src="https://avatars.githubusercontent.com/u/90378786?v=4"
+            />
             <Button variant="ghost">More Option</Button>
             <DeleteIcon cursor={"pointer"} onClick={handleDelte} />
             <CheckIcon cursor={"pointer"} onClick={handleClose} />
