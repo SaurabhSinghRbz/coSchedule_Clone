@@ -34,7 +34,7 @@ const CreateNewProject = () => {
     if (text) {
       const payload = {
         title: text,
-
+        color : "white",
         date: currentdate.current,
 
         refNO: uuid(),

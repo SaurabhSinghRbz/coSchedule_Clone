@@ -23,23 +23,35 @@ import { DayContext } from "../../context/DayContext";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteProject, editProject } from "../../Redux/App_reducer/action";
 import Tasks from "./Tasks";
+import axios from "axios";
 const EditProject = () => {
   const { projectRefNo } = useContext(DayContext);
   const [editText, setEditText] = useState(false);
   const dispatch = useDispatch();
   const data = useSelector((state) => state.App_reducer.project);
-  //console.log(data)
+  const {email} = useSelector((state)=>state.logger.isLogin.data.data)
 
+  console.log(email)
+let taskpayload = {
+...data[data.length-1],email
+}
+console.log(taskpayload)
   let editData = data.find((e) => e.refNO === projectRefNo);
 
   const navigate = useNavigate();
 
-  const handleClose = () => {
+  const handleClose = async() => {
+    await axios.post(`http://localhost:8080/api/tasks`,taskpayload)
     dispatch(editProject(projectRefNo, text));
     navigate("/calender");
   };
 
-  const handleDelte = () => {
+  const handleDelte = async () => {
+    // await axios.delete(`http://localhost:8080/tasks/projectRefNo/?email=${email}`)
+    fetch(`http://localhost:8080/api/tasks/${projectRefNo}/?email=${email}`,{
+      method: "DELETE"
+    }).then(() => console.log("Successfully deleted projectRefNo"))
+    .catch(() => console.log("Error deleting projectRefNo"))
     dispatch(deleteProject(projectRefNo));
     alert("Project Deleted");
 

@@ -1,7 +1,7 @@
 const AuthRouter = require('express').Router();
 const User = require('../models/User');
 const bcrypt = require('bcrypt');
-const { sign } = require('../utils/token');
+const { sign, decode } = require('../utils/token');
 
 
 
@@ -10,15 +10,17 @@ AuthRouter.post('/register', async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(req.body.password, salt);
     const newUser = new User({
+
         firstName: req.body.firstName,
         lastName: req.body.lastName,
+
         email: req.body.email,
         password: hashedPassword,
     });
     // alternate way to create a new user
     // const newUser = new User(req.body);
     try {
-        const user = await newUser.save();
+         let user = await newUser.save();
         return res.status(200).send(user);
     } catch (err) {
         return res.status(500).send(err);
@@ -42,14 +44,20 @@ AuthRouter.post('/login', async (req, res) => {
 
         const { password, ...otherProp } = user._doc;
         const token = sign(user.toJSON());
-        console.log(token);
-        return res.send({
+        
+       let data = decode(token)
+      
+       
+         res.send({
             status: 'success',
             message: 'You are now logged in',
             data: {
-                token
+                data
             }
+           
         })
+
+        
     } catch (err) {
         return res.status(500).send(err);
     }
