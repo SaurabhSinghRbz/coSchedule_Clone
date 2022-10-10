@@ -2,7 +2,7 @@ import { Box, Flex, Button } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
 export const Welcome = () => {
-  const navigate  = useNavigate()
+  const navigate = useNavigate();
   return (
     <Box>
       <Flex backgroundColor="white" height="92vh">
@@ -35,9 +35,6 @@ export const Welcome = () => {
             Added responsibilty leads to marketing chaos. Discover how to <br />{" "}
             take control when you organize all your marketing in one place
           </p>
-          {/* <Box display="flex" flexDirection="column" justifyContent='flex-end' marginLeft='25rem'>
-          <img src="https://app.coschedule.com/img/self-serve-onboarding/arrow-b7c5570bb63e9a27892e95f8d430f02d.png" alt="" height='120px' width='145px'/>
-          </Box> */}
         </Flex>
       </Flex>
       <Flex
@@ -47,7 +44,7 @@ export const Welcome = () => {
         alignItems="center"
         justifyContent="space-between"
       >
-        <Box marginLeft="1.4rem">
+        <Box ml="1.4rem">
           <img
             src="https://app.coschedule.com/img/cos-logo-horz-467be180cfc81cc31a93250967b1f710.svg"
             alt=""
@@ -60,7 +57,7 @@ export const Welcome = () => {
           color="white"
           marginRight="1.8rem"
           borderRadius={"50%"}
-          onClick = {() => navigate('/home')}
+          onClick={() => navigate("/home")}
         >
           Next
         </Button>

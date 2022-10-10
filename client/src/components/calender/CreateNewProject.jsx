@@ -17,7 +17,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { DayContext } from "../../context/DayContext";
 import { addNewProject } from "../../Redux/App_reducer/action";
 import { v4 as uuid } from "uuid";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 const CreateNewProject = () => {
   const { daysechdule } = useContext(DayContext);
   const { setProjectrefNo } = useContext(DayContext);
@@ -29,21 +29,37 @@ const CreateNewProject = () => {
   const dispatch = useDispatch();
 
   const [text, setText] = useState("");
-
-  const handleCreateButton = () => {
+  const { email } = useSelector((state) => state.logger.isLogin.data.data);
+  const handleCreateButton = async () => {
     if (text) {
       const payload = {
         title: text,
-        color : "white",
+        color: "white",
         date: currentdate.current,
 
         refNO: uuid(),
       };
-      //   console.log(payload)
+      await fetch(`http://localhost:8080/api/tasks`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email,
+          title: text,
+          color: "white",
+          date: currentdate.current,
+          refNO: uuid(),
+        }),
+      })
+        .then((res) => console.log(res))
+        .catch((err) => {
+          console.log(err);
+        });
       setProjectrefNo(payload.refNO);
       dispatch(addNewProject(payload));
       //  setNewproject(payload)
-      navigate("/editproject");
+      navigate("/calender");
     } else {
       alert("Please Add Project");
     }
@@ -51,8 +67,8 @@ const CreateNewProject = () => {
 
   return (
     <Box w="100%" h="28rem">
-      <Box marginLeft={"1500px"} marginTop="30px">
-        <Link to="/">
+      <Box m={"auto"} marginTop="30px">
+        <Link to="/calender">
           <CloseIcon />
         </Link>
       </Box>
@@ -63,7 +79,7 @@ const CreateNewProject = () => {
           <Box
             w="600px"
             alignItems={"center"}
-            marginLeft={"300px"}
+            ml={"300px"}
             display="flex"
             justifyContent={"space-evenly"}
           >
@@ -78,7 +94,7 @@ const CreateNewProject = () => {
               display="flex"
               justifyContent={"space-evenly"}
             >
-              <Text marginLeft={" "}>{currentdate.current} </Text>
+              <Text>{currentdate.current} </Text>
               <CalendarIcon />
             </Box>
           </Box>
@@ -88,15 +104,15 @@ const CreateNewProject = () => {
           placeholder="New Project Title"
           w="800px"
           h="70px"
-          p="20px 5px"
-          fontSize="50px"
+          p="20px 10px"
+          fontSize="35px"
           onChange={(e) => setText(e.target.value)}
         />
         <br />
         <HStack justifyContent={"space-between"}>
           <Button variant="ghost">
             {" "}
-            <GrBlog marginLeft="20px" /> Blog Post
+            <GrBlog ml="20px" /> Blog Post
           </Button>
           <Button variant="ghost">More Option</Button>
         </HStack>
@@ -104,7 +120,7 @@ const CreateNewProject = () => {
         <VStack>
           <Button
             onClick={handleCreateButton}
-            marginLeft={"600px"}
+            ml={"600px"}
             w="220px"
             h="50px"
             fontSize={"30px"}
