@@ -22,6 +22,7 @@ const DayProjects = ({ title, refNO,color }) => {
       m={2}
       onClick={() => handleClick(refNO)}
       className="pro"
+      m={2}
     >
       <Text
         bg="lightyellow"
@@ -44,7 +45,8 @@ const DayProjects = ({ title, refNO,color }) => {
         alignItems={"center"}
         backgroundColor={color}
       >
-        <Text fontSize={"15px"}>{title}</Text>
+        <Text fontSize={"14px"}>{title}</Text>
+
         <Avatar size={"sm"} src="https://bit.ly/sage-adebayo" />
       </Box>
     </Box>
