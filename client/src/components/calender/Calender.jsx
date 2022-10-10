@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import GlobalContext from "../../context/GlobalContext";
-import { addNewProject } from "../../Redux/App_reducer/action";
+import { addNewProject, resetState } from "../../Redux/App_reducer/action";
 import { getMonth } from "../../utils/utils";
 import Month from "./Month";
 
@@ -12,6 +12,7 @@ const Calender = () => {
   const { monthIndex } = useContext(GlobalContext);
   useEffect(() => {
     try {
+      dispatch(resetState());
       fetch(`http://localhost:8080/api/tasks/?email=${email}`)
         .then((res) => res.json())
         .then((res) => {

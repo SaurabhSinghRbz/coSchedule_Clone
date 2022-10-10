@@ -26,6 +26,8 @@ export const reducer = (state = initialState, { type, payload }) => {
       })
       console.log(editedArray)
       return { ...state, project: editedArray };
+    case types.RESET_STATE:
+      return initialState
     default:
       return state;
   }
