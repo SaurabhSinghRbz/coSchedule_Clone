@@ -47,7 +47,9 @@ npm i --legacy-peer-deps
 ```
 
 
-
+# Team Members (Contributors) :
+* Saurabh Singh _([GitHub](https://github.com/SaurabhSinghRbz))_
+* Benazir Sultana _([GitHub](https://github.com/Be-create))_
 
 
 # Our Agendas - 
