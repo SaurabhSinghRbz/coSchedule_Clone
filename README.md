@@ -2,8 +2,11 @@
 
 [Deployed Link](https://coschedule-clone-new.vercel.app/)
 
-At CoSchedule, we provide marketers with tools & training that are uniquely helpful, fun to use, & consistently punch above their weight.
+If you want to see our full project then you have to register for a account because our website routes are protected and it needs authentication, you can create your dummy account and after creating an account please login via same email and correct password.
 
+
+## About Coschedule
+At CoSchedule, we provide marketers with tools & training that are uniquely helpful, fun to use, & consistently punch above their weight.
 
 Co schedule is an app used by marketing teams.Graphic designer, social media strategist. Co schedule is a family of Agile Marketing products that will help you organize your content,social,work and assets in one place. CoSchedule is going to help you spend less time on the unproductive parts of your job that you hate. By co schedule we can reprioritize to handle the new tasks.
 
