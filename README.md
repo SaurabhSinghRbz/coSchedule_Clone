@@ -108,3 +108,59 @@ npm i --legacy-peer-deps
 - We all learned to build websites together as a team and also we cleared bugs and became more proficient in Handling data, using react, using the redux store, making servers, and performing curd operations on them and apart from this I learned Javascript, HTML, and CSS concepts as well.
 
 ## Some Screenshots of our websites
+
+### Landing Page 👇
+This is our landing page, In the middle part of landing page you can see different types of project and you can easily explore these.
+
+![Screenshot (30)](https://user-images.githubusercontent.com/90378786/195103938-8c6e0b7e-066a-4df4-bd8a-8fe61a0a6f12.png)
+---
+![Screenshot (31)](https://user-images.githubusercontent.com/90378786/195104140-bc45e224-c067-40f4-a8c6-1e52a51f4a90.png)
+---
+![Screenshot (32)](https://user-images.githubusercontent.com/90378786/195104151-51d8073c-81c8-439a-8481-c38598c134ae.png)
+
+### Marketing Calendar
+![Screenshot (36)](https://user-images.githubusercontent.com/90378786/195104778-037d4caf-4912-4d4f-a544-f43caed6376c.png)
+
+### Marketing Suite
+![Screenshot (41)](https://user-images.githubusercontent.com/90378786/195104926-abcb4cd3-90cf-41b1-95a6-3e943a7f5c54.png)
+
+### Login Page 👇
+![Screenshot (46)](https://user-images.githubusercontent.com/90378786/195105182-57a92bc5-a41d-4244-a6a0-02e779a4f439.png)
+
+### Signup Page 👇
+![Screenshot (47)](https://user-images.githubusercontent.com/90378786/195105187-5678727a-127e-4992-8bd9-644d5b60f489.png)
+
+### Welcome Page 👇
+![Screenshot (48)](https://user-images.githubusercontent.com/90378786/195105193-8665358e-4566-4f8a-9476-62f3f6dee9e1.png)
+---
+![Screenshot (49)](https://user-images.githubusercontent.com/90378786/195105210-81bdee07-6d82-47fc-858d-9b13d9114ba4.png)
+
+
+
+
+
+
+### Home Page 👇
+![Screenshot (51)](https://user-images.githubusercontent.com/90378786/195106500-05b8c4fa-3215-4ffd-8d91-12272f3039c1.png)
+### Calender Page 👇
+![Screenshot (53)](https://user-images.githubusercontent.com/90378786/195106508-7e951555-51eb-44fe-b942-d45d8b98b1df.png)
+### Add Project 👇
+![Screenshot (56)](https://user-images.githubusercontent.com/90378786/195106517-e0c3216f-b20a-4830-951b-40bd5a016dd7.png)
+
+
+### Update and Delete Project 👇
+![Screenshot (58)](https://user-images.githubusercontent.com/90378786/195106519-58dad4d4-4100-4361-bb39-21f7f4defd57.png)
+
+### Footer Page 👇
+![Screenshot (35)](https://user-images.githubusercontent.com/90378786/195106485-eb538914-aa2d-4a06-9f7d-77f7c1f22f13.png)
+
+
+
+## Feedback 
+Please feel free to share your thoughts.
+
+# Thank You....
+
+
+
+
