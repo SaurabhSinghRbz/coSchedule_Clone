@@ -244,7 +244,7 @@ export const Login = () => {
     e.preventDefault();
     axios
       .post(
-        "https://coschedule-api.herokuapp.com/api/auth/login",
+        "https://coschedule-server.onrender.com/api/auth/login",
         user
         // email: user.email,
         // password: user.password,
