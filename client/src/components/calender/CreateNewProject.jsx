@@ -55,7 +55,7 @@ const CreateNewProject = () => {
         refNO: uuid(),
       };
       console.log(payload);
-      await fetch(`https://coschedule-api.herokuapp.com/api/tasks`, {
+      await fetch(`https://coschedule-server.onrender.com/api/tasks`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

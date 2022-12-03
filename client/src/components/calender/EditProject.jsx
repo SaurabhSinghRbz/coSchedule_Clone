@@ -52,7 +52,7 @@ const EditProject = () => {
 
   const handleClose = async () => {
     await fetch(
-      `https://coschedule-api.herokuapp.com/api/tasks/${projectRefNo}/?email=${email}`,
+      `https://coschedule-server.onrender.com/api/tasks/${projectRefNo}/?email=${email}`,
       {
         method: "PUT",
         headers: {
@@ -71,9 +71,9 @@ const EditProject = () => {
 
   const handleDelte = async () => {
     console.log("ProjectRedNo", projectRefNo);
-    // await axios.delete(`https://coschedule-api.herokuapp.com/tasks/projectRefNo/?email=${email}`)
+    // await axios.delete(`https://coschedule-server.onrender.com/tasks/projectRefNo/?email=${email}`)
     fetch(
-      `https://coschedule-api.herokuapp.com/api/tasks/${projectRefNo}/?email=${email}`,
+      `https://coschedule-server.onrender.com/api/tasks/${projectRefNo}/?email=${email}`,
       {
         method: "DELETE",
       }
