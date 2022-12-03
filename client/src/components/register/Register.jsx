@@ -48,7 +48,7 @@ export const Register = () => {
     // console.log("ee",e)
     axios
       .post(
-        "https://coschedule-api.herokuapp.com/api/auth/register",
+        "https://coschedule-server.onrender.com/api/auth/register",
 
         {
           firstName: user.firstName,
